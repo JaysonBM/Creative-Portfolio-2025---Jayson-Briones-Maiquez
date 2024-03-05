@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+}
+
+:root {
+    /* These are global variables that you can use in your CSS */
+    --black: #121212;
+    --dark-grey:#333;
+    --mid-grey:#666;
+    --light-grey:#999;
+    --white:white;
+    --accent-colour:yellow;
+    --headline-font:"poppins", sans-serif;
+    --body-font:"poppins", sans-serif;
+    --horizontal-shift:6px;
+    --section-padding-top:120px;
+}
+
+html {
+    background-color: #121212;
+    color: rgb(235, 235, 235);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--headline-font);
+    color: rgb(235, 235, 235);
+}
+
+h1 {
+    font-size: calc(40px + (72 - 40) * (100vw - 400px) / (1800 - 400));
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: calc(32px + (48 - 32) * (100vw - 400px) / (1800 - 400));
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: calc(20px + (28 - 20) * (100vw - 400px) / (1800 - 400));
+}
+
+p {
+    font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1800 - 400));
+    margin-bottom:2rem;
+    color: rgb(235, 235, 235);
+}
+
+a {
+    font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1800 - 400));
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+#logo {
+    width: 2.7rem;
+    height: auto;
+    align-self: flex-start;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    height: 100vh;
+    padding: 5vh 5vw 0 5vw;
+    justify-content: center;
+}
+
+nav {
+    padding: 0 15vw 0 5vw;
+    background-color: #121212;
+}
+
+nav ul{
+    position: fixed;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    border-right: 2px #000000;
+    
+}
+
+nav ul li a{
+    color: white;
+}
+
+nav ul li p {
+    all: unset;
+}
+
+main {
+    align-content: center;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.two-columns2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.two-columns-fixed {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    margin-bottom: 2rem;
+    height: 100vh;
+}
+
+.three-columns {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-gap:2rem;
+    margin-bottom:2rem;
+    }
+
+#about ul {
+    list-style: none;
+}
+
+.featured {
+    grid-column: 1/-1;
+    width: 100%;
+}
+
+#portfolio a:hover h3
+#portfolio a:hover p {
+    padding-left: 1vw;
+}
+
+#contact {
+    min-height:auto;
+    margin-top: 42px;
+}
+
+#contact ul {
+    display: flex;
+    list-style-type: none;
+    margin-bottom:1rem;
+}
+
+#contact ul li a {
+    text-decoration: none;
+    color: var(--accent-colour);
+    margin: 0 20px 0 0;
+    font-size: 32px;
+}
+
+#contact ul li a:hover {
+    text-decoration: none;
+    color: var(--mid-grey);
+}
+
+.footer-end {
+    color:var(--white);
+}
+
+.footer-end a {
+        color:var(--white);
+}
+
+.footer-end a:visited {
+    color:var(--white);
+}
+
+.footer-end .btn {
+    color:var(--black);
+    background:var(--white);
+}
+
+    .footer-end .btn:hover {
+    color:var(--black);
+    background:var(--accent-colour);
+    }
+
+#about .intro-paragraph {
+    font-size: calc(20px + (28 - 20) * (100vw - 400px) / (1800 - 400));
+    grid-column: 1/-1;
+}
+
+.auto-height {
+    min-height: auto;
+}
+
+#portfolio h3,
+#portfolio p {
+    display: none;
+}
+
+/* Small devices (i.e. tablets in portrait) */
+@media (max-width: 600px) {
+
+    header {
+        display: block;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: baseline;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    .two-columns {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .three-columns {
+        grid-template-columns:1fr 1fr;
+        }
+
+}
+
+/* Medium devices (i.e. tablets in landscape */
+@media (max-width: 900px) {
+    .two-columns {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
+
+/* Large devices (i.e. desktop) */
+@media (min-width: 1200px) {
+
+}
+
+/* X-Large devices (i.e. big desktop) */
+@media (min-width: 1800px) {
+    
+}
