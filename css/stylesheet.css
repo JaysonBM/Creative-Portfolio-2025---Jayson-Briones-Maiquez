@@ -76,7 +76,6 @@ img {
 nav {
     padding: 0vh 12vw 0vh 4vw;
     background-color: #0d0d0d;
-    z-index: 1;
 }
 
 nav ul{
@@ -162,6 +161,34 @@ header {
     align-items: center;
 }
 
+.header-details {
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+}
+
+.header-details picture {
+    height: 100%;
+}
+
+.header-details img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-text {
+    height: 60%;
+    padding: 0 2.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-text p {
+    font-size: calc(16px + (24 - 16) * (100vw - 400px) / (1800 - 400));
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
 main p{
     font-size: calc(24px + (32 - 24) * (100vw - 400px) / (1800 - 400));
     margin-top: 5rem;
@@ -181,6 +208,11 @@ main p{
     grid-row: span 2;
 }
 
+.gallery div:nth-child(2),
+.gallery div:nth-child(5) {
+    grid-column: span 2;
+}
+
 .gallery div:nth-child(1) img ,
 .gallery div:nth-child(2) img ,
 .gallery div:nth-child(3) img ,
@@ -189,21 +221,39 @@ main p{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
-.gallery div:nth-child(2),
-.gallery div:nth-child(5) {
-    grid-column: span 2;
+.gallery div:nth-child(5) img {
+    object-position: top;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    padding: 0 5vw;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20vh;
+}
+
+.profile img {
+    height: 50vh;
+    width: auto;
+    object-fit: cover;
+    padding: 0 10vw;
+}
+
+.profile-text {
+    line-height: 2;
+}
+
+.skills h2 {
+    margin-bottom: 7rem;
+    padding-left: 5vw;
 }
 
 .two-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.two-columns2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
@@ -212,10 +262,19 @@ main p{
 
 .two-columns-fixed {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 40% 0.8vw 1fr;
     grid-gap: 2rem;
+    column-gap: 10rem;
     margin-bottom: 2rem;
     height: 100vh;
+}
+
+.two-columns-fixed > :nth-child(3n+1) {
+    text-align: right;
+}
+
+.two-columns-fixed > :nth-child(3n+2) {
+background-color: white;
 }
 
 .three-columns {
