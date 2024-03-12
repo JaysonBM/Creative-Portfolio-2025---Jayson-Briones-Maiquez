@@ -34,21 +34,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: calc(40px + (72 - 40) * (100vw - 400px) / (1800 - 400));
+    font-size: calc(26px + (58 - 26) * (100vw - 400px) / (1800 - 400));
     line-height: 1.2;
 }
 
 h2 {
-    font-size: calc(32px + (48 - 32) * (100vw - 400px) / (1800 - 400));
+    font-size: calc(24px + (42 - 24) * (100vw - 400px) / (1800 - 400));
     margin-bottom: 1.5rem;
 }
 
 h3 {
-    font-size: calc(20px + (28 - 20) * (100vw - 400px) / (1800 - 400));
+    font-size: calc(14px + (22 - 14) * (100vw - 400px) / (1800 - 400));
 }
 
 p {
-    font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1800 - 400));
+    font-size: calc(10px + (16 - 10) * (100vw - 400px) / (1800 - 400));
     margin-bottom:2rem;
     color: rgb(235, 235, 235);
 }
@@ -62,10 +62,14 @@ img {
     width: 100%;
 }
 
+.dark-filter {
+    opacity: 0.9;
+    background-color: black;
+}
+
 #logo {
-    width: 5.5rem;
+    width: 3.1rem;
     height: auto;
-    align-self: flex-start;
 }
 
 .container {
@@ -74,8 +78,9 @@ img {
 }
 
 nav {
-    padding: 0vh 12vw 0vh 4vw;
+    padding: 0vh 12rem 0vh 3rem;
     background-color: #0d0d0d;
+    border-right: 2px solid black;
 }
 
 nav ul{
@@ -85,23 +90,25 @@ nav ul{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    height: 99%;
     
 }
 
 nav ul li a{
     color: white;
-    font-size: calc(22px + (20 - 16) * (100vw - 400px) / (1800 - 400));
+    font-size: calc(12px + (20 - 12) * (100vw - 400px) / (1800 - 400));
 }
 
 nav ul li img {
-    margin-top: 5vh;
-    margin-bottom: 2vh;
+    margin-top: 6vh;
+    margin-bottom: 1.5vh;
 }
 
 nav ul li p {
-    margin-bottom: 10px;
-    letter-spacing: 3.8px;
+    font-size: calc(9px + (13 - 9) * (100vw - 400px) / (1800 - 400));
+    margin-bottom: 0;
+    letter-spacing: 1.8px;
+    font-weight: 100;
 }
 
 nav ul li:first-child {
@@ -131,9 +138,10 @@ nav ul li:first-child {
 }
 
 .contact p {
+    font-size: calc(13px + (18 - 13) * (100vw - 400px) / (1800 - 400));
     margin-bottom: 0;
-    font-weight: 400;
-    letter-spacing: 0.3px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
 }
 
 .contact-icons {
@@ -142,14 +150,15 @@ nav ul li:first-child {
 }
 
 .contact-icons li i{
-    font-size: 2.3rem;
+    font-size: 1.4rem;
     height: auto;
     width: auto;
-    padding: 20px 11px;
+    padding: 8px;
 }
 .contact h6 {
-    font-size: calc(12px + (14 - 12) * (100vw - 400px) / (1800 - 400));
-    line-height: 1.5;
+    font-size: calc(7px + (9 - 7) * (100vw - 400px) / (1800 - 400));
+    line-height: 1.3;
+    font-weight: 100;
 }
 
 header {
@@ -176,7 +185,7 @@ header {
 }
 
 .header-text {
-    height: 60%;
+    height: 90%;
     padding: 0 2.5vw;
     display: flex;
     flex-direction: column;
@@ -184,14 +193,22 @@ header {
 }
 
 .header-text p {
-    font-size: calc(16px + (24 - 16) * (100vw - 400px) / (1800 - 400));
+    font-size: calc(10px + (16 - 10) * (100vw - 400px) / (1800 - 400));
     line-height: 1.6;
     margin-top: 1rem;
 }
+.header-text li {
+    font-size: calc(8px + (14 - 8) * (100vw - 400px) / (1800 - 400));
+}
+
+.header-text .two-columns {
+    row-gap: 2rem;
+    margin-bottom: 0;
+}
 
 main p{
-    font-size: calc(24px + (32 - 24) * (100vw - 400px) / (1800 - 400));
-    margin-top: 5rem;
+    font-size: calc(10px + (16 - 10) * (100vw - 400px) / (1800 - 400));
+    margin-top: 3.5rem;
 }
 
 .gallery {
@@ -234,14 +251,14 @@ main p{
     padding: 0 5vw;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20vh;
+    margin-bottom: 15vh;
 }
 
 .profile img {
-    height: 50vh;
+    height: 57vh;
     width: auto;
     object-fit: cover;
-    padding: 0 10vw;
+    padding: 4vw;
 }
 
 .profile-text {
@@ -253,6 +270,10 @@ main p{
     padding-left: 5vw;
 }
 
+.skills li {
+    font-size: calc(16px + (20 - 16) * (100vw - 400px) / (1800 - 400));
+}
+
 .two-columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -262,9 +283,9 @@ main p{
 
 .two-columns-fixed {
     display: grid;
-    grid-template-columns: 40% 0.8vw 1fr;
+    grid-template-columns: 38% 0.8vw 1fr;
     grid-gap: 2rem;
-    column-gap: 10rem;
+    column-gap: 7rem;
     margin-bottom: 2rem;
     height: 100vh;
 }
@@ -274,7 +295,8 @@ main p{
 }
 
 .two-columns-fixed > :nth-child(3n+2) {
-background-color: white;
+border-right: 8px solid white;
+height: 75%;
 }
 
 .three-columns {
@@ -291,6 +313,11 @@ background-color: white;
 .featured {
     grid-column: 1/-1;
     width: 100%;
+}
+
+#portfolio {
+    margin-top: 15vh;
+    padding: 0 5vw;
 }
 
 #portfolio a:hover h3
@@ -321,33 +348,6 @@ background-color: white;
     color: var(--mid-grey);
 }
 
-.footer-end {
-    color:var(--white);
-}
-
-.footer-end a {
-        color:var(--white);
-}
-
-.footer-end a:visited {
-    color:var(--white);
-}
-
-.footer-end .btn {
-    color:var(--black);
-    background:var(--white);
-}
-
-    .footer-end .btn:hover {
-    color:var(--black);
-    background:var(--accent-colour);
-    }
-
-#about .intro-paragraph {
-    font-size: calc(20px + (28 - 20) * (100vw - 400px) / (1800 - 400));
-    grid-column: 1/-1;
-}
-
 .auto-height {
     min-height: auto;
 }
@@ -356,6 +356,60 @@ background-color: white;
 #portfolio p {
     display: none;
 }
+
+.process-title {
+    text-align: center;
+    padding: 6rem 0 2rem 0;
+}
+
+.process {
+    display: flex;
+    flex-direction: row;
+    padding: 0 5vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.process-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0 5vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.process picture,
+.process-reverse picture,
+.process-text {
+    width: 50%;
+}
+
+.process-text {
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.img-interact {
+    margin-top: 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    grid-template-rows: 50% 50%;
+}
+
+.img-interact picture img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#portfolio .two-columns div img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
 
 /* Small devices (i.e. tablets in portrait) */
 @media (max-width: 600px) {
