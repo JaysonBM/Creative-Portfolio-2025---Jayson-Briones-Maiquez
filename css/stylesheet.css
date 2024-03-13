@@ -197,7 +197,7 @@ header {
 }
 
 .header-details picture {
-    height: 100%;
+    height: 100vh;
 }
 
 .header-details img{
@@ -427,8 +427,11 @@ height: 75%;
 }
 
 .process-text {
+    padding: 0 4rem;
+}
+
+.process-text h3 {
     text-align: center;
-    padding: 0 2rem;
 }
 
 .img-interact {
@@ -500,4 +503,37 @@ height: 75%;
 /* X-Large devices (i.e. big desktop) */
 @media (min-width: 1800px) {
     
+}
+
+@media (min-width: 2880px) {
+    nav {
+        padding:0vh 23rem 0vh 8rem
+    }
+
+    #logo {
+        width: 5rem;
+    }
+
+    nav ul li p {
+        font-size: 1.4rem; 
+        margin-bottom: 1px;
+        margin-bottom: 1rem;
+    }
+
+    nav ul li a {
+        font-size: 2.3rem;
+    }
+
+    .contact p {
+        font-size: calc(16px + (22 - 16) * (100vw - 400px) / (1800 - 400));
+    }
+
+    .contact-icons li i {
+        font-size: 2.4rem;
+        padding: 1rem;
+    }
+
+    .contact h6 {
+        font-size: calc(11px + (13 - 11) * (100vw - 400px) / (1800 - 400));
+    }
 }
