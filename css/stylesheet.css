@@ -194,6 +194,7 @@ header {
 .header-details {
     grid-template-columns: 1fr 1fr;
     padding: 0;
+    margin-bottom: 20vh;
 }
 
 .header-details picture {
@@ -266,6 +267,9 @@ main p{
 
 .gallery div:nth-child(1) img {
     object-position: top;
+}
+.gallery div:nth-child(3) {
+    height: 100%;
 }
 
 .image-wrapper {
@@ -410,6 +414,7 @@ height: 75%;
     padding: 0 5vw;
     justify-content: center;
     align-items: center;
+    margin-bottom: 15vh;
 }
 
 .process-reverse {
@@ -418,6 +423,7 @@ height: 75%;
     padding: 0 5vw;
     justify-content: center;
     align-items: center;
+    margin-bottom: 15vh;
 }
 
 .process picture,
@@ -427,6 +433,7 @@ height: 75%;
 }
 
 .process-text {
+    box-sizing: border-box;
     padding: 0 4rem;
 }
 
