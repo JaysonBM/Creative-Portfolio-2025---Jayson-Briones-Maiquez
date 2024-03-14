@@ -441,6 +441,10 @@ height: 75%;
     text-align: center;
 }
 
+.process-text-span {
+    width: 75%;
+}
+
 .resize {
     min-height: 50vh;
     max-height: 75vh;
