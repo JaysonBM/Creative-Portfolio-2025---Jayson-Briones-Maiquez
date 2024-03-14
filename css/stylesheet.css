@@ -441,6 +441,12 @@ height: 75%;
     text-align: center;
 }
 
+.resize {
+    min-height: 50vh;
+    max-height: 75vh;
+    object-fit: contain;
+}
+
 .img-interact {
     margin-top: 6rem;
     display: grid;
