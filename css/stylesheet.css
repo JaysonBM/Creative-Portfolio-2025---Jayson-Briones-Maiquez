@@ -291,6 +291,10 @@ main p{
     opacity: 1; /* Show the overlay on hover */
   }
 
+  .two-columns div:hover .overlay{ 
+    opacity: 1;
+  }
+
 .profile {
     display: flex;
     flex-direction: row;
