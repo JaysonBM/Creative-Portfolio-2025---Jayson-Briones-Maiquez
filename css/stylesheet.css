@@ -271,12 +271,13 @@ header h1:nth-child(3) {
 }
 .header-text li {
     font-size: calc(8px + (14 - 8) * (100vw - 400px) / (1800 - 400));
-    margin-top: 6px;
+    /* margin-bottom: 16px; */
 }
 
 .header-text .two-columns {
     row-gap: 2rem;
     margin-bottom: 0;
+    line-height: 2;
 }
 
 main p{
@@ -384,7 +385,7 @@ main p{
 }
 
 .two-columns ul {
-    list-style-type: noner;
+    list-style-type: none;
 }
 
 .two-columns-fixed {
@@ -550,7 +551,7 @@ footer{
     display: none;
 }
 
-
+/* Medium devices (i.e. tablets in landscape */
 @media (max-width: 900px) {
     nav ul li p {
         margin-bottom: 6px;
@@ -588,6 +589,10 @@ footer{
     .two-columns-fixed {
         grid-template-columns: 1fr 1fr;
         column-gap: 4rem;
+    }
+
+    .two-columns-fixed h2 {
+        grid-column: 1 / span 2;
     }
 
     .skills li {
@@ -628,6 +633,7 @@ footer{
     }
 
 }
+
 
 /* Small devices (i.e. tablets in portrait) */
 @media (max-width: 600px) {
@@ -737,6 +743,7 @@ footer{
         grid-template-columns: 1fr;
         height: 100%;
         row-gap: 42px;
+        padding-top: 72px;
     }
     
     .header-details picture {
@@ -854,6 +861,11 @@ footer{
         text-align: center;
     }
 
+    
+    .two-columns-fixed h2 {
+        grid-column: unset;
+    }
+
     .two-columns-fixed h3 {
         text-transform: capitalize;
         margin-bottom: 0;
@@ -861,12 +873,10 @@ footer{
 
     .two-columns ul:nth-child(1){ 
         text-align: right;
-        font-style: italic;
     }
 
     .two-columns ul:nth-child(2){ 
         text-align: left;
-        font-style: italic;
     }
 
     .process,
@@ -936,11 +946,23 @@ footer{
 
 }
 
-/* Medium devices (i.e. tablets in landscape */
+
 
 /* Large devices (i.e. desktop) */
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
+    .profile img {
+        height: 40vh;
+    }
 
+    .two-columns {
+        grid-gap: 0;
+        line-height: 1.8
+        ;
+    }
+
+    .two-columns-fixed {
+        margin-right: 5vw;
+    }
 }
 
 /* X-Large devices (i.e. big desktop) */
