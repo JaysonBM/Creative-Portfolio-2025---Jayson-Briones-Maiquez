@@ -383,11 +383,16 @@ main p{
     height: 100vh;
 }
 
-.two-columns-fixed > :nth-child(3n+1) {
+.two-columns-fixed h2 {
+    grid-column: 1 / span 3;
+    text-align: left;
+}
+
+.two-columns-fixed > :not(:first-child):nth-child(3n+2) {
     text-align: right;
 }
 
-.two-columns-fixed > :nth-child(3n+2) {
+.two-columns-fixed > :nth-child(3n+3) {
 border-right: 8px solid white;
 height: 75%;
 }
