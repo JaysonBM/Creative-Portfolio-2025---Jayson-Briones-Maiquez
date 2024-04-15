@@ -255,6 +255,15 @@ header h1:nth-child(3) {
     justify-content: space-between;
 }
 
+.header-text h2 {
+    margin-bottom: 0.5rem;
+}
+
+.header-text h4 {
+    font-weight: 300;
+    font-style: italic;
+}
+
 .header-text p {
     font-size: calc(10px + (16 - 10) * (100vw - 400px) / (1800 - 400));
     line-height: 1.6;
@@ -372,6 +381,10 @@ main p{
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
     margin-bottom: 2rem;
+}
+
+.two-columns ul {
+    list-style-type: noner;
 }
 
 .two-columns-fixed {
@@ -747,6 +760,10 @@ footer{
 
     .header-text h3 {
         font-size: calc(16px + (22 - 16) * (100vw - 400px) / (1800 - 400));
+    }
+
+    .header-text h4 {
+        text-align: center;
     }
 
     .header-text p {
