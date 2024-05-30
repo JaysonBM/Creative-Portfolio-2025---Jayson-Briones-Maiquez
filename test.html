@@ -1,63 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Image Hover Example</title>
-<style>
-  .container {
-    display: flex;
-  }
-  .image {
-    width: 200px;
-    height: 200px;
-    margin: 20px;
-    overflow: hidden;
-  }
-  .image img {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s ease;
-  }
-  .image:hover img {
-    transform: scale(1.2);
-  }
-</style>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect Example</title>
+    <style>
+        .hover-target {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+    </style>
 </head>
 <body>
-
-<div class="container">
-  <div class="image" id="image1">
-    <img src="images/bespokenailsHomepage.png" alt="Image 1">
-  </div>
-  <div class="image" id="image2">
-    <img src="images/bespokenails-gallery.png" alt="Image 2">
-  </div>
-</div>
-<script>
-    $(document).ready(function() {
-      $("#image1").hover(function() {
-        $("#image2 img").fadeOut(200, function() {
-          $(this).attr("src", "images/JBM-Photo.jpg").fadeIn(200);
-        });
-      }, function() {
-        $("#image2 img").fadeOut(200, function() {
-          $(this).attr("src", "images/bespokenails-gallery.png").fadeIn(200);
-        });
-      });
-  
-      $("#image2").hover(function() {
-        $("#image1 img").fadeOut(200, function() {
-          $(this).attr("src", "images/momo-inspo.jpg").fadeIn(200);
-        });
-      }, function() {
-        $("#image1 img").fadeOut(200, function() {
-          $(this).attr("src", "images/bespokenailsHomepage.png").fadeIn(200);
-        });
-      });
-    });
-  </script>
-
+    <div class="hover-target"></div>
+    <script src="hover.js"></script>
 </body>
+<script src="https://kit.fontawesome.com/8839f852de.js" crossorigin="anonymous"></script>
+    <script 
+      src="https://code.jquery.com/jquery-3.6.4.min.js" 
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" 
+      crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="js/script.js"></script>
 </html>

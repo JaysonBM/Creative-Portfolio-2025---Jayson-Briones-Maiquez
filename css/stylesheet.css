@@ -329,7 +329,7 @@ main p{
     position: relative;
 }
 
-.overlayy {
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -417,6 +417,10 @@ height: 75%;
     grid-gap:2rem;
     margin-bottom:2rem;
     }
+
+.show-image img {
+    opacity: 1; /* Show the images */
+}
 
 #about ul {
     list-style: none;
