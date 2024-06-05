@@ -329,6 +329,10 @@ main p{
     position: relative;
 }
 
+.unityimg, .unityimg2, .unityimg3, .unityimg4 {
+ opacity: 0;
+}
+
 .overlay {
     position: absolute;
     top: 0;
