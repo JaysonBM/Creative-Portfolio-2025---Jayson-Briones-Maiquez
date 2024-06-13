@@ -22,11 +22,17 @@ $('#click-function a').click(function (e) {
 
 
 document.addEventListener("DOMContentLoaded", function () {
+
+    const gallery = document.querySelector('.gallery');
+    const imageWrapper = document.querySelector('.image-wrapper');
+
     const unityWrapper = document.querySelector('.unity-wrapper');
     const bespokenWrapper = document.querySelector('.bespoken-wrapper');
     const kingdomWrapper = document.querySelector('.kingdom-wrapper');
     const momoWrapper = document.querySelector('.momo-wrapper');
     const signageWrapper = document.querySelector('.signage-wrapper');
+
+
 
     const unitydiv = unityWrapper.querySelector('picture');
     const unityh2 = unityWrapper.querySelector('h2');
@@ -36,9 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const unityimg2 = document.querySelector('.unityimg2');
     const unityimg3 = document.querySelector('.unityimg3');
     const unityimg4 = document.querySelector('.unityimg4');
-    
-    
-    
+
+    const defaultImg = document.querySelector('.default-img');
 
     unityWrapper.addEventListener('mouseenter', function () {
 
@@ -52,9 +57,10 @@ document.addEventListener("DOMContentLoaded", function () {
             unityimg2.style.display = 'block';
             unityimg3.style.display = 'block';
             unityimg4.style.display = 'block';
-
+            defaultImg.style.display = 'none';
+            
             unityWrapper.style.opacity = '1';
-        }, 1000);
+        }, 150);
     });
     
     unityWrapper.addEventListener('mouseleave', function () {
@@ -69,9 +75,10 @@ document.addEventListener("DOMContentLoaded", function () {
             unityimg2.style.display = 'none';
             unityimg3.style.display = 'none';
             unityimg4.style.display = 'none';
+            defaultImg.style.display = 'block';
 
             unityWrapper.style.opacity = '1';
-        }, 1000);
+        }, 150);
     });
 });
 

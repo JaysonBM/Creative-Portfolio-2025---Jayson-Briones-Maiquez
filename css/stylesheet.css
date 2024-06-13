@@ -333,6 +333,14 @@ main p{
  opacity: 0;
 }
 
+.display-none {
+    display: none;
+}
+
+.default-img {
+    display: block;
+}
+
 .overlay {
     position: absolute;
     top: 0;
