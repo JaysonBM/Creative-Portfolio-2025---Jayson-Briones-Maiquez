@@ -329,8 +329,8 @@ main p{
     position: relative;
 }
 
-.unityimg, .unityimg2, .unityimg3, .unityimg4 {
- opacity: 0;
+.unityimg, .unityimg2, .unityimg3, .unityimg4, .bespokenimg1, .bespokenimg2, .bespokenimg3, .bespokenimg4{
+ display: none;
 }
 
 .display-none {
