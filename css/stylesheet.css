@@ -345,6 +345,7 @@ header h1:nth-child(3) {
 .gallery {
     display: grid;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 0;
@@ -414,10 +415,15 @@ header h1:nth-child(3) {
     flex-direction: row;
     align-items: center;
 =======
+=======
+>>>>>>> Stashed changes
     width: 50%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     height: 100vh;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }
 
