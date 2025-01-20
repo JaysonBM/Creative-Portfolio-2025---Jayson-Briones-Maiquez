@@ -432,14 +432,6 @@ header h1:nth-child(3) {
     overflow: hidden;
 }
 
-.unityimg, .unityimg2, .unityimg3, .unityimg4, .bespokenimg1, .bespokenimg2, .bespokenimg3, .bespokenimg4{
- display: none;
-}
-
-.display-none {
-    display: none;
-}
-
 .default-img {
     display: block;
 }
@@ -453,34 +445,68 @@ header h1:nth-child(3) {
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s ease; /* Add transition for smooth effect */
-  }
+}
   
-  .gallery div:hover .overlay {
-    opacity: 1; /* Show the overlay on hover */
-  }
+.gallery div:hover .overlay {
+opacity: 1; /* Show the overlay on hover */
+}
 
-  .two-columns div:hover .overlay{ 
-    opacity: 1;
-  }
+.two-columns div:hover .overlay{ 
+opacity: 1;
+}
+
+.image-wrapper::after {
+content: ''; /* Creates an empty pseudo-element */
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+opacity: 0; /* Initially hidden */
+transition: opacity 0.3s ease; /* Smooth fade-in/out transition */
+}
+
+.image-wrapper:hover::after {
+    opacity: 1; /* Shows the overlay on hover */
+}
 
 .profile {
     display: flex;
-    flex-direction: row;
-    padding: 0 5vw;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15vh;
+    flex-direction: column;
+    margin: 0 0 15vh 8px;
+    border-bottom: 5px solid #C13838;
+}
+
+.profile picture {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    border-top: 5px solid #C13838;
+    border-bottom: 5px solid #C13838;
+    padding: 12px;
+    gap: 12px;
 }
 
 .profile img {
-    height: 57vh;
-    width: auto;
+    height: 228px;
     object-fit: cover;
-    padding: 4vw;
 }
 
 .profile-text {
+    text-align: center;
     line-height: 2;
+    margin: 10vh 20vw;
+}
+
+.profile p {
+    text-align: left;
+    margin: 60px 0;
+}
+
+.profile .btn {
+    padding: 8px 22px;
+    font-size: 0.73rem;
+    border-radius: 14px;
 }
 
 .skills h2 {
