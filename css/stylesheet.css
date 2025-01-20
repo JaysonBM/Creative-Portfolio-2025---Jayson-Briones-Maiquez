@@ -59,7 +59,7 @@ h1 {
 }
 
 h2 {
-    font-size: calc(19px + (19 - 16)*(100vw - 400px) / (1800 - 400));
+    font-size: calc(16px + (16 - 14)*(100vw - 400px) / (1800 - 400));
     margin-bottom: 1.5rem;
     line-height: 1.2;
     font-weight: 500;
@@ -70,7 +70,7 @@ h3 {
 }
 
 p {
-    font-size: calc(12px + (12 - 9) * (100vw - 400px) / (1800 - 400));
+    font-size: calc(11px + (11 - 8) * (100vw - 400px) / (1800 - 400));
     color: rgb(235, 235, 235);
     line-height: 1.4;
 }
@@ -99,6 +99,7 @@ img {
     font-weight: 500;
     letter-spacing: 0.4px;
     border-radius: 18px;
+    transition: 0.3s;
 }
 
 .btn:hover {
@@ -176,7 +177,7 @@ nav ul > li:nth-child(1) {
 .nav-buttons li:hover .li-hover {
     opacity: 1;
     visibility: visible;
-    transform: translateX(6vh);
+    transform: translateX(5vh);
 }
 
 nav .contact {
@@ -347,15 +348,38 @@ header h1:nth-child(3) {
     grid-template-rows: 1fr 1fr;
     grid-gap: 0;
     height: 70vh;
+    width: 100%;
 }
 
+.gallery-description {
+    position: relative;
+    width: 100%;
+    height: 62vh;
+    overflow: hidden;
+}
+
+.gallery-description > div {
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease; /* Smooth fade-in and fade-out */
+    position: absolute; /* Stack descriptions */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none; /* Initially hidden */
+}
+
+.gallery-description > div.active {
+    opacity: 1; /* Fully visible */
+    display: block; /* Make it block-level so it’s rendered */
+}
+
+.default-description ,
 .unity-description ,
-.bespokenails-description , 
+.bespoken-description , 
 .kingdom-description , 
 .signage-description {
-    display: flex;
-    flex-direction: column;
-    
+    height: 62vh;
     padding: 3.3vw;
 }
 
@@ -363,11 +387,26 @@ header h1:nth-child(3) {
     background-color: #C13838;
     height: 5px;
     width: 25%;
-    margin: 0px 2vw;
+    margin: 0px 0 0 2vw;
 }
 
+.gallery-container h2 {
+    margin-bottom: 10vh;
+}
+
+.gallery-container p {
+    margin-bottom: 60px;
+}
+
+.gallery-container .btn {
+    padding: 8px 22px;
+    font-size: 0.73rem;
+    border-radius: 14px;
+}
+
+.default-description div:nth-child(1),
 .unity-description div:nth-child(1),
-.bespokenails-description div:nth-child(1), 
+.bespoken-description div:nth-child(1), 
 .kingdom-description div:nth-child(1), 
 .signage-description div:nth-child(1) {
     display: flex;

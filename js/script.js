@@ -20,222 +20,293 @@ $('#click-function a').click(function (e) {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const gallery = document.querySelector('#gallery')
+    const imageWrappers = document.querySelectorAll(".image-wrapper"); // All image-wrapper divs
+    const descriptions = document.querySelectorAll(".gallery-description > div"); // All description divs
+    let activeDescription = document.querySelector(".default-description"); // Start with the default description as active
 
-    const unityWrapper = document.querySelector('.unity-wrapper');
-    const bespokenWrapper = document.querySelector('.bespoken-wrapper');
-    const kingdomWrapper = document.querySelector('.kingdom-wrapper');
-    const momoWrapper = document.querySelector('.momo-wrapper');
-    const signageWrapper = document.querySelector('.signage-wrapper');
+    // Function to hide all descriptions
+    function hideAllDescriptions() {
+        descriptions.forEach(desc => {
+            desc.style.opacity = "0"; // Fade out
+            setTimeout(() => {
+                // desc.style.display = "none"; // Fully hide after fade-out
+            }, 500); // Match the CSS transition duration
+        });
+    }
 
-    const hide = document.querySelector('.hide');
-    const hide1 = document.querySelector('.hide1');
-    const hide2 = document.querySelector('.hide2');
-    const hide3 = document.querySelector('.hide3');
-    const hide4 = document.querySelector('.hide4');
+    // Function to show a specific description
+    function showDescription(description) {
+        if (activeDescription === description) return; // Skip if the description is already active
 
-    const unitydiv = unityWrapper.querySelector('picture');
-    const unityh2 = unityWrapper.querySelector('h2');
-    const unityh3 = unityWrapper.querySelector('h3');
-    const unityp = unityWrapper.querySelector('p');
-    const unityimg = document.querySelector('.unityimg1');
-    const unityimg2 = document.querySelector('.unityimg2');
-    const unityimg3 = document.querySelector('.unityimg3');
-    const unityimg4 = document.querySelector('.unityimg4');
+        // Fade out the currently active description
+        if (activeDescription) {
+            activeDescription.style.opacity = "0";
+            setTimeout(() => {
+                // activeDescription.style.display = "none";
+            }, 500); // Match fade-out duration
+        }
 
-    const defaultImg = document.querySelector('.default-img');
+        // Show the new description
+        description.style.display = "block"; // Make it block-level
+        setTimeout(() => {
+            description.style.opacity = "1"; // Fade in
+        }, 50); // Small delay for smoother transition
 
-    unityWrapper.addEventListener('mouseenter', function () {
+        // Update the active description
+        activeDescription = description;
+    }
 
-        unityWrapper.style.opacity = '0';
-        setTimeout(function () {
-            unitydiv.style.display = 'none';
-            unityh2.style.display = 'block';
-            unityh3.style.display = 'block';
-            unityp.style.display = 'block';
+    // Hover over image wrappers to show corresponding description
+    imageWrappers.forEach(wrapper => {
+        wrapper.addEventListener("mouseenter", function () {
+            // Use the data-target attribute to find the corresponding description
+            const targetDescriptionSelector = `.${wrapper.dataset.target}`;
+            const targetDescription = document.querySelector(targetDescriptionSelector);
 
-            unityWrapper.style.opacity = '1';
-        }, 500);
-
-        bespokenWrapper.style.opacity = '0';
-        setTimeout(function () {
-            unityimg.style.display = 'block';
-            hide1.style.display = 'none';
-
-            bespokenWrapper.style.opacity = '1';
-        }, 500);
-
-        kingdomWrapper.style.opacity = '0';
-        setTimeout(function () {
-            unityimg2.style.display = 'block';
-            hide2.style.display = 'none';
-
-            kingdomWrapper.style.opacity = '1';
-        }, 500);
-
-        momoWrapper.style.opacity = '0';
-        setTimeout(function () {
-            unityimg3.style.display = 'block';
-            hide3.style.display = 'none';
-
-            momoWrapper.style.opacity = '1';
-        }, 500);
-
-        signageWrapper.style.opacity = '0';
-        setTimeout(function () {
-            unityimg4.style.display = 'block';
-            hide4.style.display = 'none';
-
-            signageWrapper.style.opacity = '1';
-        }, 500);
-    });
-    
-    unityWrapper.addEventListener('mouseleave', function () {
-        
-        unityWrapper.style.opacity = '0';
-        setTimeout(function () {
-            unitydiv.style.display = 'block';
-            unityh2.style.display = 'none';
-            unityh3.style.display = 'none';
-            unityp.style.display = 'none';
-
-            unityWrapper.style.opacity = '1';
-        }, 500);
-
-        bespokenWrapper.style.opacity = '0';
-        setTimeout(function () {
-            unityimg.style.display = 'none';
-            hide1.style.display = 'block';
-            
-            bespokenWrapper.style.opacity = '1';
-        }, 500);
-
-        kingdomWrapper.style.opacity = '0';
-        setTimeout(function () {
-            unityimg2.style.display = 'none';
-            hide2.style.display = 'block';
-
-            kingdomWrapper.style.opacity = '1';
-        }, 500);
-
-        momoWrapper.style.opacity = '0';
-        setTimeout(function () {
-            unityimg3.style.display = 'none';
-            hide3.style.display = 'block';
-
-            momoWrapper.style.opacity = '1';
-        }, 500);
-
-        signageWrapper.style.opacity = '0';
-        setTimeout(function () {
-            unityimg4.style.display = 'none';
-            hide4.style.display = 'block';
-
-            signageWrapper.style.opacity = '1';
-        }, 500);
-
+            if (targetDescription) {
+                showDescription(targetDescription); // Show the corresponding description
+            }
+        });
     });
 
-    const bespokendiv = bespokenWrapper.querySelector('picture');
-    const bespokenh2 = bespokenWrapper.querySelector('h2');
-    const bespokenh3 = bespokenWrapper.querySelector('h3');
-    const bespokenp = bespokenWrapper.querySelector('p');
-    const bespokenimg = document.querySelector('.bespokenimg1');
-    const bespokenimg2 = document.querySelector('.bespokenimg2');
-    const bespokenimg3 = document.querySelector('.bespokenimg3');
-    const bespokenimg4 = document.querySelector('.bespokenimg4');
-
-    bespokenWrapper.addEventListener('mouseenter', function () {
-
-        unityWrapper.style.opacity = '0';
-        setTimeout(function () {
-            bespokenimg.style.display = 'block';
-            hide.style.display = 'none';
-
-            unityWrapper.style.opacity = '1';
-        }, 500);
-
-        bespokenWrapper.style.opacity = '0';
-        setTimeout(function () {
-            bespokendiv.style.display = 'none';
-            bespokenh2.style.display = 'block';
-            bespokenh3.style.display = 'block';
-            bespokenp.style.display = 'block';
-
-            bespokenWrapper.style.opacity = '1';
-        }, 500);
-
-        kingdomWrapper.style.opacity = '0';
-        setTimeout(function () {
-            bespokenimg2.style.display = 'block';
-            hide2.style.display = 'none';
-
-            kingdomWrapper.style.opacity = '1';
-        }, 500);
-
-        momoWrapper.style.opacity = '0';
-        setTimeout(function () {
-            bespokenimg3.style.display = 'block';
-            hide3.style.display = 'none';
-
-            momoWrapper.style.opacity = '1';
-        }, 500);
-
-        signageWrapper.style.opacity = '0';
-        setTimeout(function () {
-            bespokenimg4.style.display = 'block';
-            hide4.style.display = 'none';
-
-            signageWrapper.style.opacity = '1';
-        }, 500);
-    });
-    
-    bespokenWrapper.addEventListener('mouseleave', function () {
-        
-        unityWrapper.style.opacity = '0';
-        setTimeout(function () {
-            bespokenimg.style.display = 'none';
-            hide.style.display = 'block';
-
-            unityWrapper.style.opacity = '1';
-        }, 500);
-
-        bespokenWrapper.style.opacity = '0';
-        setTimeout(function () {
-            bespokendiv.style.display = 'block';
-            bespokenh2.style.display = 'none';
-            bespokenh3.style.display = 'none';
-            bespokenp.style.display = 'none';
-            
-            bespokenWrapper.style.opacity = '1';
-        }, 500);
-
-        kingdomWrapper.style.opacity = '0';
-        setTimeout(function () {
-            bespokenimg2.style.display = 'none';
-            hide2.style.display = 'block';
-
-            kingdomWrapper.style.opacity = '1';
-        }, 500);
-
-        momoWrapper.style.opacity = '0';
-        setTimeout(function () {
-            bespokenimg3.style.display = 'none';
-            hide3.style.display = 'block';
-
-            momoWrapper.style.opacity = '1';
-        }, 500);
-
-        signageWrapper.style.opacity = '0';
-        setTimeout(function () {
-            bespokenimg4.style.display = 'none';
-            hide4.style.display = 'block';
-
-            signageWrapper.style.opacity = '1';
-        }, 500);
-
-    });
+    // Initial setup: Ensure only the default description is visible
+    hideAllDescriptions();
+    activeDescription.style.display = "block";
+    activeDescription.style.opacity = "1";
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     const gallery = document.querySelector('#gallery')
+
+//     const unityWrapper = document.querySelector('.unity-wrapper');
+//     const bespokenWrapper = document.querySelector('.bespoken-wrapper');
+//     const kingdomWrapper = document.querySelector('.kingdom-wrapper');
+//     const momoWrapper = document.querySelector('.momo-wrapper');
+//     const signageWrapper = document.querySelector('.signage-wrapper');
+
+//     const hide = document.querySelector('.hide');
+//     const hide1 = document.querySelector('.hide1');
+//     const hide2 = document.querySelector('.hide2');
+//     const hide3 = document.querySelector('.hide3');
+//     const hide4 = document.querySelector('.hide4');
+
+//     const unitydiv = unityWrapper.querySelector('picture');
+//     const unityh2 = unityWrapper.querySelector('h2');
+//     const unityh3 = unityWrapper.querySelector('h3');
+//     const unityp = unityWrapper.querySelector('p');
+//     const unityimg = document.querySelector('.unityimg1');
+//     const unityimg2 = document.querySelector('.unityimg2');
+//     const unityimg3 = document.querySelector('.unityimg3');
+//     const unityimg4 = document.querySelector('.unityimg4');
+
+//     const defaultImg = document.querySelector('.default-img');
+
+//     unityWrapper.addEventListener('mouseenter', function () {
+
+//         unityWrapper.style.opacity = '0';
+//         setTimeout(function () {
+//             unitydiv.style.display = 'none';
+//             unityh2.style.display = 'block';
+//             unityh3.style.display = 'block';
+//             unityp.style.display = 'block';
+
+//             unityWrapper.style.opacity = '1';
+//         }, 500);
+
+//         bespokenWrapper.style.opacity = '0';
+//         setTimeout(function () {
+//             unityimg.style.display = 'block';
+//             hide1.style.display = 'none';
+
+//             bespokenWrapper.style.opacity = '1';
+//         }, 500);
+
+//         kingdomWrapper.style.opacity = '0';
+//         setTimeout(function () {
+//             unityimg2.style.display = 'block';
+//             hide2.style.display = 'none';
+
+//             kingdomWrapper.style.opacity = '1';
+//         }, 500);
+
+//         momoWrapper.style.opacity = '0';
+//         setTimeout(function () {
+//             unityimg3.style.display = 'block';
+//             hide3.style.display = 'none';
+
+//             momoWrapper.style.opacity = '1';
+//         }, 500);
+
+//         signageWrapper.style.opacity = '0';
+//         setTimeout(function () {
+//             unityimg4.style.display = 'block';
+//             hide4.style.display = 'none';
+
+//             signageWrapper.style.opacity = '1';
+//         }, 500);
+//     });
+    
+//     unityWrapper.addEventListener('mouseleave', function () {
+        
+//         unityWrapper.style.opacity = '0';
+//         setTimeout(function () {
+//             unitydiv.style.display = 'block';
+//             unityh2.style.display = 'none';
+//             unityh3.style.display = 'none';
+//             unityp.style.display = 'none';
+
+//             unityWrapper.style.opacity = '1';
+//         }, 500);
+
+//         bespokenWrapper.style.opacity = '0';
+//         setTimeout(function () {
+//             unityimg.style.display = 'none';
+//             hide1.style.display = 'block';
+            
+//             bespokenWrapper.style.opacity = '1';
+//         }, 500);
+
+//         kingdomWrapper.style.opacity = '0';
+//         setTimeout(function () {
+//             unityimg2.style.display = 'none';
+//             hide2.style.display = 'block';
+
+//             kingdomWrapper.style.opacity = '1';
+//         }, 500);
+
+//         momoWrapper.style.opacity = '0';
+//         setTimeout(function () {
+//             unityimg3.style.display = 'none';
+//             hide3.style.display = 'block';
+
+//             momoWrapper.style.opacity = '1';
+//         }, 500);
+
+//         signageWrapper.style.opacity = '0';
+//         setTimeout(function () {
+//             unityimg4.style.display = 'none';
+//             hide4.style.display = 'block';
+
+//             signageWrapper.style.opacity = '1';
+//         }, 500);
+
+//     });
+
+//     const bespokendiv = bespokenWrapper.querySelector('picture');
+//     const bespokenh2 = bespokenWrapper.querySelector('h2');
+//     const bespokenh3 = bespokenWrapper.querySelector('h3');
+//     const bespokenp = bespokenWrapper.querySelector('p');
+//     const bespokenimg = document.querySelector('.bespokenimg1');
+//     const bespokenimg2 = document.querySelector('.bespokenimg2');
+//     const bespokenimg3 = document.querySelector('.bespokenimg3');
+//     const bespokenimg4 = document.querySelector('.bespokenimg4');
+
+//     bespokenWrapper.addEventListener('mouseenter', function () {
+
+//         unityWrapper.style.opacity = '0';
+//         setTimeout(function () {
+//             bespokenimg.style.display = 'block';
+//             hide.style.display = 'none';
+
+//             unityWrapper.style.opacity = '1';
+//         }, 500);
+
+//         bespokenWrapper.style.opacity = '0';
+//         setTimeout(function () {
+//             bespokendiv.style.display = 'none';
+//             bespokenh2.style.display = 'block';
+//             bespokenh3.style.display = 'block';
+//             bespokenp.style.display = 'block';
+
+//             bespokenWrapper.style.opacity = '1';
+//         }, 500);
+
+//         kingdomWrapper.style.opacity = '0';
+//         setTimeout(function () {
+//             bespokenimg2.style.display = 'block';
+//             hide2.style.display = 'none';
+
+//             kingdomWrapper.style.opacity = '1';
+//         }, 500);
+
+//         momoWrapper.style.opacity = '0';
+//         setTimeout(function () {
+//             bespokenimg3.style.display = 'block';
+//             hide3.style.display = 'none';
+
+//             momoWrapper.style.opacity = '1';
+//         }, 500);
+
+//         signageWrapper.style.opacity = '0';
+//         setTimeout(function () {
+//             bespokenimg4.style.display = 'block';
+//             hide4.style.display = 'none';
+
+//             signageWrapper.style.opacity = '1';
+//         }, 500);
+//     });
+    
+//     bespokenWrapper.addEventListener('mouseleave', function () {
+        
+//         unityWrapper.style.opacity = '0';
+//         setTimeout(function () {
+//             bespokenimg.style.display = 'none';
+//             hide.style.display = 'block';
+
+//             unityWrapper.style.opacity = '1';
+//         }, 500);
+
+//         bespokenWrapper.style.opacity = '0';
+//         setTimeout(function () {
+//             bespokendiv.style.display = 'block';
+//             bespokenh2.style.display = 'none';
+//             bespokenh3.style.display = 'none';
+//             bespokenp.style.display = 'none';
+            
+//             bespokenWrapper.style.opacity = '1';
+//         }, 500);
+
+//         kingdomWrapper.style.opacity = '0';
+//         setTimeout(function () {
+//             bespokenimg2.style.display = 'none';
+//             hide2.style.display = 'block';
+
+//             kingdomWrapper.style.opacity = '1';
+//         }, 500);
+
+//         momoWrapper.style.opacity = '0';
+//         setTimeout(function () {
+//             bespokenimg3.style.display = 'none';
+//             hide3.style.display = 'block';
+
+//             momoWrapper.style.opacity = '1';
+//         }, 500);
+
+//         signageWrapper.style.opacity = '0';
+//         setTimeout(function () {
+//             bespokenimg4.style.display = 'none';
+//             hide4.style.display = 'block';
+
+//             signageWrapper.style.opacity = '1';
+//         }, 500);
+
+//     });
+// });
 
 
 
