@@ -185,7 +185,7 @@ nav .contact {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 8px;
+    gap: 0.8vh;
     margin-bottom: 1vh;
 }
 
@@ -344,6 +344,7 @@ header h1:nth-child(3) {
 
 .gallery {
     display: grid;
+<<<<<<< Updated upstream
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 0;
@@ -412,6 +413,12 @@ header h1:nth-child(3) {
     display: flex;
     flex-direction: row;
     align-items: center;
+=======
+    width: 50%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100vh;
+>>>>>>> Stashed changes
 }
 
 .gallery div:nth-child(1) img ,
