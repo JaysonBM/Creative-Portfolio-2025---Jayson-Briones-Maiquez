@@ -54,14 +54,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: calc(40px + (40 - 32) * (100vw - 400px) / (1800 - 400));
+    font-size: calc(26px + (26 - 18) * (100vw - 400px) / (1800 - 400));
     line-height: 1.2;
 }
 
 h2 {
-    font-size: calc(22px +(34 - 26)*(100vw - 400px) / (1800 - 400));
+    font-size: calc(19px + (19 - 16)*(100vw - 400px) / (1800 - 400));
     margin-bottom: 1.5rem;
     line-height: 1.2;
+    font-weight: 500;
 }
 
 h3 {
@@ -69,7 +70,7 @@ h3 {
 }
 
 p {
-    font-size: calc(14px + (14 - 11) * (100vw - 400px) / (1800 - 400));
+    font-size: calc(12px + (12 - 9) * (100vw - 400px) / (1800 - 400));
     color: rgb(235, 235, 235);
     line-height: 1.4;
 }
@@ -93,8 +94,8 @@ img {
     border-right: 3.5px solid #C13838;
     border-bottom: 3.5px solid #C13838;
     color: white;
-    padding: 19px 47px;
-    font-size: 1rem;
+    padding: 12px 34px;
+    font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.4px;
     border-radius: 18px;
@@ -105,13 +106,17 @@ img {
 }
 
 nav {
-    /* background-color: #000000; */
     background: linear-gradient(to bottom, #030303, #000000);
     border-right: 8px solid #C13838;
     position: fixed;
     z-index: 1;
-    width: 16vw;
+    width: 15vw;
 }
+
+.content-container {
+    margin-left: 15vw;
+}
+
 
 nav ul{
     list-style: none;
@@ -133,11 +138,11 @@ nav ul li img {
 }
 
 nav ul li p {
-    font-size: calc(13px + (13 - 11) * (100vw - 400px) / (1800 - 400));
-    letter-spacing: 2.7px;
-    font-weight: 500;
+    font-size: calc(11px + (11 - 9)*(100vw - 400px) /(1800 - 400));
+    letter-spacing: 1.6px;
+    font-weight: 200;
     text-align: center;
-    margin-top: 12px;
+    margin-top: 10px;
 }
 
 nav ul > li:nth-child(1) {
@@ -151,20 +156,17 @@ nav ul > li:nth-child(1) {
 }
 
 .nav-buttons li{
-    margin-bottom: 4vh;
+    margin-bottom: 3vh;
     font-weight: 400;
 }
 
 .li-hover {
     position: absolute;
     left: -23%;
-    margin-top: 5px;
-    /* display: inline-block; */
+    margin-top: 10px;
     background-color: #C13838;
     height: 6px;
     width: 6.6vh;
-    /* border-radius: 100%; */
-    /* margin-bottom: 3px; */
     opacity: 0;
     box-shadow: 0 0 6px #C13838;
     visibility: hidden;
@@ -176,11 +178,6 @@ nav ul > li:nth-child(1) {
     visibility: visible;
     transform: translateX(6vh);
 }
-
-.content-container {
-    margin-left: 16vw;
-}
-
 
 nav .contact {
     display: flex;
@@ -292,13 +289,14 @@ header h1:nth-child(3) {
 
 .title-deco-container h3 {
     font-weight: 300;
+    font-size: 14px;
 }
 
 .title-deco {
     background-color: #C13838;
     height: 5px;
     width: 28%;
-    margin: 0px 52px;
+    margin: 0px 2.2vw;
 }
 
 .main-index {
@@ -315,7 +313,7 @@ header h1:nth-child(3) {
 }
 
 .main-index img {
-    width: 15%;
+    width: 17%;
 }
 
 .main-index p {
@@ -327,7 +325,7 @@ header h1:nth-child(3) {
 }
 
 .main-index .btn {
-    margin: 66px;
+    margin: 3.3vw;
 }
 
 .main-p-container h2{
@@ -336,23 +334,45 @@ header h1:nth-child(3) {
     line-height: 4;
 }
 
+.gallery-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    align-items: center;
+}
+
 .gallery {
     display: grid;
-    grid-template-columns: 33% 34% 33%;
-    grid-template-rows: 33% 34% 33%;
-    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-gap: 0;
-    margin-bottom:20vh;
+    height: 70vh;
 }
 
-.gallery div:nth-child(1),
-.gallery div:nth-child(4) {
-    grid-row: span 2;
+.unity-description ,
+.bespokenails-description , 
+.kingdom-description , 
+.signage-description {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 3.3vw;
 }
 
-.gallery div:nth-child(2),
-.gallery div:nth-child(5) {
-    grid-column: span 2;
+.description-deco {
+    background-color: #C13838;
+    height: 5px;
+    width: 25%;
+    margin: 0px 2vw;
+}
+
+.unity-description div:nth-child(1),
+.bespokenails-description div:nth-child(1), 
+.kingdom-description div:nth-child(1), 
+.signage-description div:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .gallery div:nth-child(1) img ,
@@ -366,13 +386,6 @@ header h1:nth-child(3) {
     object-fit: cover;
     object-position: center;
     overflow: hidden;
-}
-
-.gallery div:nth-child(1) img {
-    object-position: top;
-}
-.gallery div:nth-child(3) {
-    height: 100%;
 }
 
 .image-wrapper {
