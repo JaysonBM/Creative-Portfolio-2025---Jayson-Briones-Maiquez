@@ -161,15 +161,27 @@
                 </section>
                 <section id="about">
                     <div class="profile">
-                        <picture>
-                            <img src="images/slider-img.jpg" alt=""/>
-                            <img src="images/slider-img2.jpeg" alt=""/>
-                            <img src="images/slider-img3.jpg" alt=""/>
-                            <img src="images/slider-img4.jpg" alt=""/>
-                            <img src="images/slider-img5.jpg" alt=""/>
-                            <img src="images/slider-img6.jpg" alt=""/>
-                            <img src="images/slider-img7.jpg" alt=""/>
-                        </picture>
+                        <div class="slider" style="
+                            --image-height: 250px;
+                            --image-width: 9vw;
+                            --quantity: 8;
+                            border-top: 5px solid #C13838;
+                            border-bottom: 5px solid #C13838;
+                            padding: 16px 0 ;
+                            ">
+                            <picture class="slider-list">
+                                <!-- <div class="slider-item" style="--position: 1"><img src="images/slider-img6.jpg" alt=""/></div> -->
+                                <div class="slider-item" style="--position: 2"><img src="images/slider-img2.webp" alt=""/></div>
+                                <div class="slider-item" style="--position: 3"><img src="images/slider-img3.webp" alt=""/></div>
+                                <div class="slider-item" style="--position: 4"><img src="images/slider-img8.webp" alt=""/></div>
+                                <div class="slider-item" style="--position: 5"><img src="images/slider-img10.webp" alt=""/></div>
+                                <div class="slider-item" style="--position: 6"><img src="images/slider-img4.webp" alt=""/></div>
+                                <div class="slider-item" style="--position: 7"><img src="images/slider-img.webp" alt=""/></div>
+                                <div class="slider-item" style="--position: 8"><img src="images/slider-img5.webp" alt=""/></div>
+                                <div class="slider-item" style="--position: 9"><img src="images/slider-img9.webp" alt=""/></div>
+                                <!-- <div class="slider-item" style="--position: 10"><img src="images/slider-img7.jpg" alt=""/></div> -->
+                            </picture>
+                        </div>
                         <div class="profile-text">
                             <h2>This is Me</h2>
                             <p>
@@ -181,55 +193,49 @@
                             <a class="btn" href="mailto:jaysonbmaiquez@gmail.com">Let's connect!</a>
                         </div>
                     </div>
-                    <div class="skills">
-                        <div class="two-columns-fixed">
-                            <h1>Skills</h1>
-                            <h3>Adobe</h3>
-                            <div class="divider"></div>
-                            <div class="two-columns">
-                                <ul>
-                                    <li>Photoshop</li>
-                                    <li>Illustrator</li>
-                                    <li>Indesign</li>
-                                    <li>XD</li>
-                                    <li>Dimension</li>
-                                </ul>
-                                <ul>
-                                    <li>Premiere Pro</li>
-                                    <li>Lightroom</li>
-                                    <li>After Effects</li>
-                                    <li>Bridge</li>
-                                </ul>
-                            </div>
-                            <h3>Coding</h3>
-                            <div class="divider"></div>
-                            <div class="two-columns">
-                                <ul>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>JavaScript</li>
-                                </ul>
-                                <ul>
-                                    <li>Visual Studio Code</li>
-                                    <li>Webflow</li>
-                                    <li>Contentful</li>
-                                </ul>
-                    
-                            </div>
-                            <h3>Personal</h3>
-                            <div class="divider"></div>
-                            <div class="two-columns">
-                                <ul>
-                                    <li>Creative</li>
-                                    <li>Critical Thinking</li>
-                                    <li>Detail-Oriented</li>
-                                </ul>
-                                <ul>
-                                    <li>Perseverant</li>
-                                    <li>Inquisitive</li>
-                                </ul>
+                    <div class="skills" style="margin-left: 8px; height: 100vh;">
+                        <h1 style="text-align: center;">Skills</h1>
+                        <div class="creative-suite">
+                            <img src="images/Adobe-Photoshop-Icon.png" alt="">
+                            <img src="images/Adobe-Illustrator-Icon.png" alt="">
+                            <img src="images/Adobe-Indesign-Icon.png" alt="">
+                            <img src="images/Adobe-XD-Icon.png" alt="">
+                            <img src="images/Adobe-Premiere-Pro-Icon.png" alt="">
+                            <img src="images/Adobe-Lightroom-Icon.png" alt="">
+                            <img src="images/Adobe-After-Effects-Icon.png" alt="">
+                            <img src="images/Visual-Studio-Code-Icon.png" alt="">
+                        </div>
+                        <div class="slider" style="
+                            --image-height: 34px;
+                            --image-width: 10%;
+                            --quantity: 10;
+                            border-top: 2px solid white;
+                            border-bottom: 2px solid white;
+                            padding: 0px 0 12px 0;
+                            display: flex;
+                            align-items: center;
+                            ">
+                            <div class="slider-list">
+                                <div class="slider-item" style="--position: 1; text-align: center;"><h5>Leadership</h5></div>
+                                <div class="slider-item" style="--position: 2; text-align: center;"><h5>Creative</h5></div>
+                                <div class="slider-item" style="--position: 3; text-align: center;"><h5>Critical Thinking</h5></div>
+                                <div class="slider-item" style="--position: 4; text-align: center;"><h5>Detail Oriented</h5></div>
+                                <div class="slider-item" style="--position: 5; text-align: center;"><h5>Perseverant</h5></div>
+                                <div class="slider-item" style="--position: 6; text-align: center;"><h5>Inquisitive</h5></div>
+                                <div class="slider-item" style="--position: 7; text-align: center;"><h5>Empathy</h5></div>
+                                <div class="slider-item" style="--position: 8; text-align: center;"><h5>Adaptability</h5></div>
+                                <div class="slider-item" style="--position: 9; text-align: center;"><h5>Problem-Solving</h5></div>
+                                <div class="slider-item" style="--position: 10; text-align: center;"><h5>Collaboration</h5></div>
                             </div>
                         </div>
+                        <div>
+
+                        </div>
+                        <h6 style="
+                        text-align: center;
+                        font-weight: 100;
+                        margin: 16px 0;
+                        ">Website coded by me! Using Visual Studio Code</h6>
                     </div>
                 </section>
             </div>
