@@ -93,6 +93,27 @@ document.querySelectorAll('.hover-effect img').forEach(img => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const konamiCode = [
+        "ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown",
+        "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight",
+        "KeyB", "KeyA"
+    ];
+    let konamiIndex = 0;
+
+    document.addEventListener("keydown", function (event) {
+        if (event.code === konamiCode[konamiIndex]) {
+            konamiIndex++;
+            if (konamiIndex === konamiCode.length) {
+                alert("Ahhh you found the code!! Good job xD");
+                konamiIndex = 0; // Reset the index
+            }
+        } else {
+            konamiIndex = 0; // Reset the index if the sequence is broken
+        }
+    });
+});
+
 
 
 
