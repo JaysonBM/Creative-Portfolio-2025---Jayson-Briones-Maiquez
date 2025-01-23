@@ -595,14 +595,15 @@ header h1:nth-child(3) {
     left: 30%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-image: url('../images/slider-img5.webp'); /* Corrected syntax */
-    background-size: cover; /* Optional: ensures the image covers the entire element */
-    background-position: center; /* Optional: centers the image */
+    background-image: url('../images/JBM Logo White.svg'); /* Corrected syntax */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .skills-bar {
     background-color: #C13838;
-    height: 72%;
+    height: 0%;
     width: 50px;
     transform: translate(-50%, 0%);
     position: absolute;
