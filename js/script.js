@@ -141,7 +141,60 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.hover-effect img').forEach(img => {
+        img.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent the click from propagating to the document
 
+            // Remove active and inactive classes from all images
+            document.querySelectorAll('.hover-effect img').forEach(el => {
+                el.classList.remove('active');
+                el.classList.add('inactive');
+            });
+
+            // Add active class to the clicked image and remove inactive class
+            img.classList.add('active');
+            img.classList.remove('inactive');
+
+            // Change the background image or video of the .skills-display
+            const bgMedia = img.getAttribute('data-bg');
+            const skillsDisplay = document.querySelector('.skills-display');
+            if (bgMedia.endsWith('.mp4')) {
+                skillsDisplay.innerHTML = `<video width="100%" height="100%" controls autoplay loop>
+                    <source src="${bgMedia}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>`;
+            } else {
+                skillsDisplay.style.backgroundImage = `url(${bgMedia})`;
+                skillsDisplay.innerHTML = ''; // Remove any existing video
+            }
+
+            // Change the height of the .skills-bar
+            const barHeight = img.getAttribute('data-height');
+            document.querySelector('.skills-bar').style.height = barHeight;
+        });
+    });
+
+    // Add an event listener to the document to detect clicks outside the .hover-effect div
+    document.addEventListener('click', (event) => {
+        const hoverEffectDiv = document.querySelector('.hover-effect');
+        if (!hoverEffectDiv.contains(event.target)) {
+            // Remove active and inactive classes from all images
+            document.querySelectorAll('.hover-effect img').forEach(el => {
+                el.classList.remove('active');
+                el.classList.remove('inactive');
+            });
+
+            // Reset the background image or video of the .skills-display
+            const skillsDisplay = document.querySelector('.skills-display');
+            skillsDisplay.style.backgroundImage = '';
+            skillsDisplay.innerHTML = ''; // Remove any existing video
+
+            // Reset the height of the .skills-bar
+            document.querySelector('.skills-bar').style.height = '0%';
+        }
+    });
+});
 
 
 
