@@ -126,6 +126,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+
 // document.addEventListener("DOMContentLoaded", function () {
 //     const gallery = document.querySelector('#gallery')
 
