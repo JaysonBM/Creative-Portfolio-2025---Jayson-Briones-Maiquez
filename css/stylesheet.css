@@ -479,6 +479,11 @@ header h1:nth-child(3) {
     overflow: hidden;
 }
 
+.slider:nth-child(1):hover {
+    background-color: #C13838;
+    transition: 0.3s;
+}
+
 .slider-list {
     display: flex;
     width: 100%;
@@ -551,7 +556,7 @@ header h1:nth-child(3) {
 
 .creative-suite img {
     object-fit: contain;
-    width: auto; /* Reset width */
+    height: 7.7vh;
 }
 
 .hover-effect:hover img{
