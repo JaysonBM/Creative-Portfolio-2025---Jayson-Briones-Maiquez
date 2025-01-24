@@ -75,24 +75,49 @@ document.addEventListener("DOMContentLoaded", function () {
     activeDescription.style.opacity = "1";
 });
 
-document.querySelectorAll('.hover-effect img').forEach(img => {
-    img.addEventListener('click', () => {
-        // Remove active class from all images
-        document.querySelectorAll('.hover-effect img').forEach(el => el.classList.remove('active'));
-        
-        // Add active class to the clicked image
-        img.classList.add('active');
-        
-        // Change the background image of the .skills-display
-        const bgImage = img.getAttribute('data-bg');
-        document.querySelector('.skills-display').style.backgroundImage = `url(${bgImage})`;
-        
-        // Change the height of the .skills-bar
-        const barHeight = img.getAttribute('data-height');
-        document.querySelector('.skills-bar').style.height = barHeight;
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.hover-effect img').forEach(img => {
+        img.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent the click from propagating to the document
+
+            // Remove active and inactive classes from all images
+            document.querySelectorAll('.hover-effect img').forEach(el => {
+                el.classList.remove('active');
+                el.classList.add('inactive');
+            });
+
+            // Add active class to the clicked image and remove inactive class
+            img.classList.add('active');
+            img.classList.remove('inactive');
+
+            // Change the background image of the .skills-display
+            const bgImage = img.getAttribute('data-bg');
+            document.querySelector('.skills-display').style.backgroundImage = `url(${bgImage})`;
+
+            // Change the height of the .skills-bar
+            const barHeight = img.getAttribute('data-height');
+            document.querySelector('.skills-bar').style.height = barHeight;
+        });
+    });
+
+    // Add an event listener to the document to detect clicks outside the .hover-effect div
+    document.addEventListener('click', (event) => {
+        const hoverEffectDiv = document.querySelector('.hover-effect');
+        if (!hoverEffectDiv.contains(event.target)) {
+            // Remove active and inactive classes from all images
+            document.querySelectorAll('.hover-effect img').forEach(el => {
+                el.classList.remove('active');
+                el.classList.remove('inactive');
+            });
+
+            // Reset the background image of the .skills-display
+            document.querySelector('.skills-display').style.backgroundImage = '';
+
+            // Reset the height of the .skills-bar
+            document.querySelector('.skills-bar').style.height = '0%';
+        }
     });
 });
-
 
 
 

@@ -541,6 +541,7 @@ header h1:nth-child(3) {
     padding: 3% 0;
     justify-content: center; /* Center align content */
     gap: 38px;
+    transition: 0.2s;
 }
 
 .skills h1 {
@@ -562,6 +563,14 @@ header h1:nth-child(3) {
 }
 
 .hover-effect img.active {
+    filter: none;
+}
+
+.hover-effect img.inactive {
+    filter: grayscale(1) blur(2px);
+}
+
+.hover-effect img:hover:not(.active) {
     filter: none;
 }
 
@@ -589,8 +598,8 @@ header h1:nth-child(3) {
 }
 
 .skills-display {
-    height: 50vh;
-    width: 30vw;
+    height: 55vh;
+    width: 40vw;
     position: absolute;
     left: 30%;
     top: 50%;
