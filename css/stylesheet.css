@@ -480,7 +480,7 @@ header h1:nth-child(3) {
 }
 
 .slider:nth-child(1):hover {
-    background-color: #C13838;
+    background-color: #c1383870;
     transition: 0.3s;
 }
 
