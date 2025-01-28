@@ -196,6 +196,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll('.your-element-class'); // Replace with your element's class
+
+    elements.forEach(element => {
+        element.addEventListener('touchstart', function () {
+            element.classList.add('touch-slide');
+        });
+
+        element.addEventListener('touchend', function () {
+            element.classList.remove('touch-slide');
+        });
+
+        element.addEventListener('touchmove', function () {
+            element.classList.add('touch-slide');
+        });
+    });
+});
+
 
 
 

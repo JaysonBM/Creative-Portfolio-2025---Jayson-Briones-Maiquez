@@ -811,20 +811,8 @@ footer{
         flex-direction: column;
     }
 
-    header {
-        height: 85vh;
-    }
-
     .profile {
         flex-direction: column;
-    }
-
-    .profile img {
-        height: 45vh;
-    }
-
-    .profile h2 {
-        text-align: center;
     }
 
     .divider {
@@ -892,6 +880,14 @@ footer{
         width: 100vw;
         height: 72px;
         position: fixed;
+        border-bottom: 3px solid #C13838;
+        background: black;
+    }
+
+    /* Add styles for when the element is being touched */
+    .touch-slide {
+        background-color: #C13838; /* Example style */
+        /* Add other styles as needed */
     }
 
     nav ul {
@@ -980,8 +976,77 @@ footer{
     }
 
     header {
-        padding-top: 42px;
-        height: 85vh;
+        padding-top: 86px;
+
+    }
+
+    .main-index {
+        height: 94%;     
+        gap: 7%;
+        justify-content: flex-start;
+    }
+
+    .main-index img {
+        width: 25%;
+    }
+
+    .main-index p {
+        font-size: 12.6px;
+    }
+
+   .main-index .btn {
+        margin: 5vw;
+        padding: 12px 28px;
+        font-size: 0.7rem;
+        letter-spacing: 0.5px;
+        border-radius: 15px;
+    }
+    
+    .title-deco-container {
+        position: static;
+        width: 100vw;
+    }
+
+    .title-deco-container h3 { 
+        white-space: nowrap;
+        font-size: 12px;
+    }
+
+    .title-deco {
+        height: 2.4px;
+        width: 100%;
+    }
+
+    .gallery-container {
+        flex-direction: column;
+    }
+
+    .gallery {
+        height: 50vh;
+    }
+
+    .description-deco {
+        height: 3px;
+    }
+
+    .gallery-description {
+        height: 50vh;
+    }
+
+    .gallery-container .btn {
+        padding: 10px 22px;
+        font-size: 0.65rem;
+        border-radius: 11px;
+    }
+
+    .hide-link-on-phone {
+        pointer-events: none; /* Disable click events */
+        cursor: default; /* Change cursor to default */
+    }
+
+    .default-description, .unity-description, .bespoken-description, .kingdom-description, .signage-description { 
+        height: 50vh;
+        padding: 5vw;
     }
     
     .header-details {
@@ -1032,48 +1097,79 @@ footer{
         margin-top: 30px;
     }
 
-    .gallery {
-      display: flex; 
-      flex-wrap: wrap;
-      height: 100%;
-      margin-bottom: 15vh;
-    }
-
-    .gallery div:nth-child(1),
-    .gallery div:nth-child(2), 
-    .gallery div:nth-child(4),
-    .gallery div:nth-child(5) {
-        flex-basis: 50%;
-    }
-
-    .gallery div:nth-child(3) {
-        flex-basis: 100%;
-    }
-
     .profile {
-        flex-direction: column;
-
-    padding: 0 10vw;
+        margin: 0;
     }
-
-    .profile img {
-        height: 35vh;
-        width: 60vw;
-    }
-    
-    .profile-text h2 {
-        text-align: center;
-        margin-top: 36px;
-        font-size: calc(29px + (44 - 29) * (100vw - 400px) / (1800 - 400));
-    }    
         
     .profile > .profile-text > p {
-        font-size: calc(14px + (19 - 14) * (100vw - 400px) / (1800 - 400));
         line-height: 1.7;
     }
 
+    .profile-text {
+        margin: 8vh 15vw;
+    }
+
+    .slider:nth-child(1) {    
+        --image-height: 20vh !important;
+        --image-width: 15vw !important;
+        border-top: 3px solid #C13838 !important;
+        border-bottom: 3px solid #C13838 !important;
+    }
+
+    .slider-item {
+        width: 13%;
+        animation: autoRun 10s linear infinite;
+        animation-delay: calc((10s / var(--quantity))*(var(--position) - 1));
+    }
+
+    .slider-item img {
+        height: 20vh;
+    }
+
+    .slider:nth-child(2) {
+        --image-height: 22px !important;
+        --image-width: 18% !important;
+        border-top: 1.7px solid white !important;
+        border-bottom: 1.7px solid white !important;
+        padding-top: 9px !important;
+    }
+
+    .second-slider-list .slider-item {
+        width: 0%;
+        animation: autoRun 20s linear infinite;
+        animation-delay: calc((20s / var(--quantity))*(var(--position) - 1));
+    }
+
+    .slider-item h5 {
+        font-size: 12px;
+    }
+
     .skills {
-        text-align: center;
+        margin-left: 0px !important;
+        height: 80vh !important;
+    }
+
+    .skills-container {
+        height: 50vh;
+        margin: 0;
+    }
+
+    .creative-suite {
+        gap: 12px;
+        padding: 3% 5vw;
+    }
+
+    .creative-suite a {
+        scroll-margin-top: 50vh;
+    }
+
+    .skills-display {
+        height: 50vh;
+        width: 50vw;
+    }
+
+    .skills-chart {
+        --container-height: 40vh;
     }
 
     .skills h2 {
@@ -1195,9 +1291,6 @@ footer{
 
 /* Large devices (i.e. desktop) */
 @media (max-width: 1200px) {
-    .profile img {
-        height: 40vh;
-    }
 
     .two-columns {
         grid-gap: 0;
