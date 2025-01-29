@@ -115,7 +115,7 @@ nav {
 }
 
 .content-container {
-    margin-left: 15vw;
+    margin-left: calc(15vw + 8px);
 }
 
 
