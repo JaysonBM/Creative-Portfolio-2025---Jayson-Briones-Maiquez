@@ -879,7 +879,8 @@ footer{
         overflow: hidden;
         width: 100vw;
         height: 72px;
-        position: fixed;
+        position:absolute;
+        top: 0;
         border-bottom: 3px solid #C13838;
         background: black;
     }
@@ -973,11 +974,7 @@ footer{
 
     .content-container {
         margin-left: 0;
-    }
-
-    header {
-        padding-top: 86px;
-
+        margin-top: 72px;
     }
 
     .main-index {
