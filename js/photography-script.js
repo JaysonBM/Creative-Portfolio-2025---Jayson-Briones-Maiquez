@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(fullscreenOverlay);
 
     const fullscreenImage = document.createElement('img');
+    fullscreenImage.loading = 'lazy'; // Add lazy loading attribute to fullscreen image
     fullscreenOverlay.appendChild(fullscreenImage);
 
     function openFullscreen(img) {
