@@ -6,7 +6,15 @@
     margin-bottom: 1vw;
 }
 
-/* Add this to your CSS file */
+#photography-container img {
+    max-width: 100%; /* Ensure the image does not exceed the container's width */
+    max-height: 300px; /* Set a maximum height for the images */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px; /* Add some space around the images */
+    cursor: pointer; /* Change cursor to pointer to indicate clickability */
+} 
+
 .fullscreen-overlay {
     position: fixed;
     top: 0;
