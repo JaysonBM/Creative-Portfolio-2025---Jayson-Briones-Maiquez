@@ -140,7 +140,7 @@ nav ul li img {
 
 nav ul li p {
     font-size: calc(11px + (11 - 9)*(100vw - 400px) /(1800 - 400));
-    letter-spacing: 1.6px;
+    letter-spacing: 4px;
     font-weight: 200;
     text-align: center;
     margin-top: 10px;
@@ -879,7 +879,7 @@ footer{
         overflow: hidden;
         width: 100vw;
         height: 72px;
-        position:absolute;
+        position: fixed;
         top: 0;
         border-bottom: 3px solid #C13838;
         background: black;
