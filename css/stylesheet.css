@@ -77,7 +77,7 @@ p {
 }
 
 a {
-    font-size: calc(15px + (19 - 15) * (100vw - 400px) / (1800 - 400));
+    font-size: calc(15px + (15 - 11) * (100vw - 400px) / (1800 - 400));
     text-decoration: none;
 }
 
@@ -100,7 +100,7 @@ img {
     font-weight: 500;
     letter-spacing: 0.4px;
     border-radius: 18px;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .btn:hover {
@@ -132,10 +132,19 @@ nav ul{
 nav ul li a{
     color: white;
     width: 27%;
+    display: block;
+}
+
+.center-align {
+    display: flex;
+    flex-direction: row-reverse; /* Change to row if you want items side by side */
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-end; /* Center items vertically */
 }
 
 nav ul li p {
-    font-size: calc(11px + (11 - 9)*(100vw - 400px) /(1800 - 400));
+    font-size: clamp(0.8rem, calc(11px + (11 - 9)*(100vw - 400px) /(1800 - 400)), 4rem);
+    /* font-size: calc(11px + (11 - 9)*(100vw - 400px) /(1800 - 400)); */
     letter-spacing: 4px;
     font-weight: 200;
     text-align: center;
@@ -164,8 +173,7 @@ nav ul >li:nth-child(1) div {
 
 .li-hover {
     position: absolute;
-    left: -23%;
-    margin-top: 10px;
+    left: -6vw;
     background-color: #C13838;
     height: 6px;
     width: 6.6vh;
@@ -178,7 +186,7 @@ nav ul >li:nth-child(1) div {
 .nav-buttons li:hover .li-hover {
     opacity: 1;
     visibility: visible;
-    transform: translateX(5vh);
+    transform: translateX(6vw);
 }
 
 nav .contact {
@@ -432,6 +440,24 @@ header h1:nth-child(3) {
 .image-wrapper {
     position: relative;
     overflow: hidden;
+}
+
+.image-wrapper p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-weight: 800;
+    opacity: 0; /* Hide the text */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.image-wrapper:hover p {
+    opacity: 1; /* Show the text */
+    z-index: 1;
 }
 
 .default-img {
@@ -710,10 +736,6 @@ header h1:nth-child(3) {
     min-height: auto;
 }
 
-.gallery h3,
-.gallery p {
-    display: none;
-}
 
 .process-title {
     text-align: center;
@@ -1175,6 +1197,7 @@ footer{
 
     .creative-suite img {
         height: 5rem;
+        object-fit: cover;
     }
 
     .skills-display {
