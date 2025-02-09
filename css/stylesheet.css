@@ -507,10 +507,10 @@ header h1:nth-child(3) {
     overflow: hidden;
 }
 
-.slider:nth-child(1):hover {
+/* .slider:nth-child(1):hover {
     background-color: #c1383870;
     transition: 0.3s;
-}
+} */
 
 .slider-list {
     display: flex;
@@ -542,12 +542,13 @@ header h1:nth-child(3) {
     }
 }
 
-.slider:hover .slider-item {
+/* .slider:nth-child(2):hover .slider-item {
     animation-play-state: paused!important;
-}
+} */
+
 
 .profile {
-    margin: 0 0 2vh 8px;
+    margin: 0 0 2vh 0px;
     border-bottom: 5px solid #C13838;
 }
 
@@ -580,6 +581,38 @@ header h1:nth-child(3) {
 .skills h1 {
     text-align: center;
     margin-top: 3vh;
+}
+
+.personal-skills {
+    font-size: 12px;
+    padding-block: 8px;
+    border-block: 2px solid;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    --gap: 46px;
+    gap: var( --gap);
+    margin: 2vh 0 2vh 0;
+}
+
+.personal-skills ul {
+    display: flex;
+    justify-content: space-between;
+    gap: var( --gap);
+    align-items: center;
+    flex-shrink: 0;
+    min-width: 100%;
+    animation: scroll 30s linear infinite;
+}
+
+.personal-skills:hover ul {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX(calc(-100% + var( --gap)));
+    }
 }
 
 .creative-suite img {
@@ -850,11 +883,6 @@ footer{
 
     .two-columns-fixed h2 {
         grid-column: 1 / span 2;
-    }
-
-    .skills li {
-        font-size: calc(12px + (19 - 12) * (100vw - 400px) / (1800 - 400));
-        margin: 0 0 6px 0;
     }
 
     .header-text {
@@ -1159,23 +1187,23 @@ footer{
         height: 20vh;
     }
 
-    .slider:nth-child(2) {
+    /* .slider:nth-child(2) {
         --image-height: 22px !important;
         --image-width: 18% !important;
         border-top: 1.7px solid white !important;
         border-bottom: 1.7px solid white !important;
         padding-top: 9px !important;
-    }
+    } */
 
-    .second-slider-list .slider-item {
+    /* .second-slider-list .slider-item {
         width: 0%;
         animation: autoRun 20s linear infinite;
         animation-delay: calc((20s / var(--quantity))*(var(--position) - 1));
-    }
+    } */
 
-    .slider-item h5 {
+    /* .slider-item h5 {
         font-size: 12px;
-    }
+    } */
 
     .skills {
         margin-left: 0px !important;
@@ -1199,6 +1227,7 @@ footer{
     .creative-suite img {
         height: 5rem;
         object-fit: cover;
+        width: 100%;
     }
 
     .skills-display {
@@ -1214,10 +1243,6 @@ footer{
         padding-left: 0;
         margin-bottom: .15rem;
         font-size: calc(29px + (44 - 29) * (100vw - 400px) / (1800 - 400));
-    }
-
-    .skills li {
-        margin-bottom: 16px;
     }
 
     .two-columns-fixed {
