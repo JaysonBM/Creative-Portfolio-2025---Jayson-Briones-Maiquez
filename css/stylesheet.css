@@ -984,7 +984,8 @@ footer{
         top: 0;
         border-bottom: 3px solid #C13838;
         background: black;
-    }
+        z-index: 2;
+        }
 
     /* Add styles for when the element is being touched */
     .touch-slide {
@@ -995,7 +996,6 @@ footer{
     nav ul {
         flex-direction: row;
         height: auto;
-        z-index: 10;
         justify-content: normal;
         flex-wrap: wrap;
         margin: 0.75rem 0vw 0 0vw;
@@ -1040,13 +1040,14 @@ footer{
 
     .nav-buttons li {
         margin: 1.3rem; 
+        justify-content: center;
     }
 
     .li-hover {
         display: none;
     }
 
-    #content-container, #gallery, #about {
+    #content-container, #gallery-container, #about {
         scroll-margin-top: 72px;
     }
 
@@ -1111,6 +1112,10 @@ footer{
         font-size: 0.7rem;
         letter-spacing: 0.5px;
         border-radius: 15px;
+    }
+
+    .image-wrapper p {
+        font-size: 2rem;
     }
     
     .title-deco-container {
@@ -1220,20 +1225,13 @@ footer{
     }
 
     .slider:nth-child(1) {    
-        --image-height: 20vh !important;
-        --image-width: 15vw !important;
-        border-top: 3px solid #C13838 !important;
-        border-bottom: 3px solid #C13838 !important;
+        --slider-gap: 0.7rem;
+        height: 12vh;
     }
 
-    .slider-item {
-        width: 13%;
-        animation: autoRun 10s linear infinite;
-        animation-delay: calc((10s / var(--quantity))*(var(--position) - 1));
-    }
-
-    .slider-item img {
-        height: 20vh;
+    .slider picture img {
+        height: 13vh;
+        width: 20vw;
     }
 
     /* .slider:nth-child(2) {
@@ -1256,7 +1254,11 @@ footer{
 
     .skills {
         margin-left: 0px !important;
-        height: 80vh !important;
+        height: auto !important;
+    }
+
+    .skills h4 {
+        font-size: 9px;
     }
 
     .skills-container {
@@ -1265,8 +1267,9 @@ footer{
     }
 
     .creative-suite {
-        gap: 12px;
+        gap: 0.6rem;
         padding: 3% 5vw;
+        height: auto;
     }
 
     .creative-suite a {
@@ -1274,9 +1277,8 @@ footer{
     }
 
     .creative-suite img {
-        height: 5rem;
-        object-fit: cover;
-        width: 100%;
+        height: 4rem;
+        width: 10vw;
     }
 
     .skills-display {
@@ -1286,6 +1288,10 @@ footer{
 
     .skills-chart {
         --container-height: 40vh;
+    }
+
+    .skills-bar {
+        width: 36px;
     }
 
     .skills h2 {
