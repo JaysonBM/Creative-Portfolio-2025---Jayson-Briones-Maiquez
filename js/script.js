@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
             activeDescription.style.opacity = "0";
             setTimeout(() => {
                 // activeDescription.style.display = "none";
-            }, 500); // Match fade-out duration
+            }, 300); // Match fade-out duration
         }
 
         // Show the new description
