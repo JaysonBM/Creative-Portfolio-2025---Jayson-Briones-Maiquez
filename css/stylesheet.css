@@ -459,7 +459,7 @@ header h1:nth-child(3) {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 3vw, 3rem);
     text-transform: uppercase;
     white-space: nowrap;
     font-weight: 800;
@@ -626,7 +626,7 @@ header h1:nth-child(3) {
 
 .skills h1 {
     text-align: center;
-    margin-top: 3vh;
+    margin-top: 10vh;
 }
 
 .personal-skills {
@@ -638,7 +638,7 @@ header h1:nth-child(3) {
     user-select: none;
     --gap: 4.9vw;
     gap: var( --gap);
-    margin: 2vh 0 2vh 0;
+    margin: 4vh 0 2vh 0;
 }
 
 .personal-skills ul {
@@ -942,10 +942,6 @@ footer{
         font-size: calc(12px + (18 - 12) * (100vw - 400px) / (1800 - 400));
     }
 
-    .header-text h3 {
-        font-size: calc(16px + (23 - 16) * (100vw - 400px) / (1800 - 400));
-    }
-
     .header-text li {
         font-size: calc(11px + (16 - 11) * (100vw - 400px) / (1800 - 400));
         line-height: 1.5;
@@ -1191,10 +1187,6 @@ footer{
         text-align: center;
     }
 
-    .header-text h3 {
-        font-size: calc(16px + (22 - 16) * (100vw - 400px) / (1800 - 400));
-    }
-
     .header-text h4 {
         text-align: center;
     }
@@ -1294,12 +1286,6 @@ footer{
         width: 36px;
     }
 
-    .skills h2 {
-        padding-left: 0;
-        margin-bottom: .15rem;
-        font-size: calc(29px + (44 - 29) * (100vw - 400px) / (1800 - 400));
-    }
-
     .two-columns-fixed {
         grid-gap: 0;
         height: auto;
@@ -1353,10 +1339,6 @@ footer{
     .process-text {
         width: 100%;
         padding: 0 16px;
-    }
-
-    .process-text h3 {
-        font-size: calc(20px + (22 - 20) * (100vw - 400px) / (1800 - 400));
     }
 
     .process-text p {

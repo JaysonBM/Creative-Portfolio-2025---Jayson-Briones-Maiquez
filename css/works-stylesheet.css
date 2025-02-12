@@ -1,0 +1,29 @@
+.filter-buttons {
+    display: flex; /* Use flexbox to align items */
+    justify-content: center; /* Center the buttons horizontally */
+    margin: 0 auto; /* Center the container itself if needed */
+    width: fit-content; /* Adjust width as needed */
+}
+
+.filter-button {
+    font-size: 13px;
+    border: 1px solid #ffffff;
+    border-radius: 11px;
+    /* text-align: center; */
+    cursor: pointer;
+    padding: 6px 16px;
+    margin: 0px 2px;
+    background-color: #0e0e0e;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+    background-color: #C13838;
+    border: 1px solid #C13838;
+}
+
+.works-container {
+    columns: 4;
+}
