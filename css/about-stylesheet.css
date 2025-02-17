@@ -2,6 +2,8 @@
 .about-slider {
     background-color: black;
     margin: auto;
+    border-block: none;
+    padding-block: 0;
 }
 
 .bento {
