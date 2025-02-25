@@ -83,6 +83,7 @@ a {
 
 img {
     width: 100%;
+    height: auto;
 }
 
 .dark-filter {
@@ -893,20 +894,6 @@ header h1:nth-child(3) {
     min-height: 50vh;
     max-height: 75vh;
     object-fit: contain;
-}
-
-.img-interact {
-    margin-top: 6rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 100vh;
-    grid-template-rows: 50% 50%;
-}
-
-.img-interact picture img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
 }
 
 #portfolio .two-columns div img {
