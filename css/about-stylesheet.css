@@ -1,7 +1,8 @@
 
 .about-slider {
-    background-color: black;
     margin: auto;
+    padding-block: 0;
+    border-block: 0;
 }
 
 .bento {
@@ -151,6 +152,10 @@
 
 .about p { 
     line-height: 2.5;
+}
+
+.experience {
+    padding: 10vh;
 }
 
 @media (max-width: 600px) {

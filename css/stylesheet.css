@@ -95,16 +95,35 @@ img {
     border-right: 3.5px solid #C13838;
     border-bottom: 3.5px solid #C13838;
     color: white;
-    padding: 12px 34px;
-    font-size: 0.9rem;
+    padding: 7px 22px;
+    font-size: 0.73rem;
     font-weight: 500;
-    letter-spacing: 0.4px;
-    border-radius: 18px;
+    letter-spacing: 0.5px;
+    border-radius: 13px;
     transition: 0.5s;
+    margin: 3vw;
+}
+
+.btn2 {
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: 0.5s;
+    margin: 3vw; 
+    text-decoration: underline;
 }
 
 .btn:hover {
     background-color: #C13838;
+}
+
+.btn2:hover {
+    color: #C13838;
+}
+
+.content-container {
+    margin-left: calc(15vw + 8px);
 }
 
 nav {
@@ -113,10 +132,6 @@ nav {
     position: fixed;
     z-index: 1;
     width: 15vw;
-}
-
-.content-container {
-    margin-left: calc(15vw + 8px);
 }
 
 
@@ -136,7 +151,8 @@ nav ul li a{
 }
 
 nav ul li a:hover {
-    font-size: calc(18px + (17 - 12)*(100vw - 400px) /(1800 - 400));
+    /* filter: drop-shadow(2px 2px 2px #C13838); */
+    color: #c96060;
 }
 
 .center-align {
@@ -179,7 +195,7 @@ nav ul >li:nth-child(1) div {
     position: absolute;
     left: -6vw;
     background-color: #C13838;
-    height: 6px;
+    height: 4px;
     width: 6.6vh;
     opacity: 0;
     box-shadow: 0 0 6px #C13838;
@@ -200,10 +216,6 @@ nav .contact {
     text-align: center;
     gap: 0.8vh;
     margin-bottom: 1vh;
-}
-
-nav .contact li i:hover  {
-    font-size: 2rem;
 }
 
 .contact p {
@@ -228,6 +240,72 @@ nav .contact-icons {
     font-weight: 100;
 }
 
+.main-deco {
+    width: 10vw;
+        /* Add your background pattern here */
+        --sz: 24px;
+        --c0: #000;
+        --c1: #c13838;
+        --ts: 50% / calc(var(--sz) * 8) calc(var(--sz) * 16);
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        --dot: var(--c1) 0 calc(var(--sz) * 0.78),
+          #fff0 calc(calc(var(--sz) * 0.78) + 1px) 100%;
+        --dot2: radial-gradient(circle at 90% 0%, var(--dot)) var(--ts),
+          radial-gradient(circle at 65% 0%, var(--dot)) var(--ts),
+          radial-gradient(circle at 40% 0%, var(--dot)) var(--ts),
+          radial-gradient(circle at 15% 0%, var(--dot)) var(--ts);
+        --cg1: conic-gradient(from -90deg at 5% 51%, var(--c0) 0 90deg, #fff0 0 100%)
+          var(--ts);
+        --cg2: conic-gradient(from -90deg at 25% 50%, var(--c1) 0 90deg, #fff0 0 100%)
+          var(--ts);
+        --cg3: conic-gradient(
+            from -90deg at 30% 38.5%,
+            var(--c0) 0 90deg,
+            #fff0 0 100%
+          )
+          var(--ts);
+        --cg4: conic-gradient(
+            from -90deg at 50% 37.5%,
+            var(--c1) 0 90deg,
+            #fff0 0 100%
+          )
+          var(--ts);
+        --cg5: conic-gradient(from -90deg at 55% 26%, var(--c0) 0 90deg, #fff0 0 100%)
+          var(--ts);
+        --cg6: conic-gradient(from -90deg at 75% 25%, var(--c1) 0 90deg, #fff0 0 100%)
+          var(--ts);
+        --cg7: conic-gradient(
+            from -90deg at 80% 13.5%,
+            var(--c0) 0 90deg,
+            #fff0 0 100%
+          )
+          var(--ts);
+        --cg8: conic-gradient(
+            from -90deg at 100% 12.5%,
+            var(--c1) 0 90deg,
+            #fff0 0 100%
+          )
+          var(--ts);
+      
+        background: var(--dot2), var(--dot2),
+          radial-gradient(circle at 90% 100%, var(--dot)) var(--ts),
+          radial-gradient(circle at 65% 100%, var(--dot)) var(--ts),
+          radial-gradient(circle at 40% 100%, var(--dot)) var(--ts),
+          radial-gradient(circle at 15% 100%, var(--dot)) var(--ts),
+          radial-gradient(circle at 90% 12.5%, var(--dot)) var(--ts),
+          radial-gradient(circle at 65% 25%, var(--dot)) var(--ts),
+          radial-gradient(circle at 40% 37.5%, var(--dot)) var(--ts),
+          radial-gradient(circle at 15% 50%, var(--dot)) var(--ts), var(--cg1),
+          var(--cg1), var(--cg2), var(--cg2), var(--cg3), var(--cg3), var(--cg4),
+          var(--cg4), var(--cg5), var(--cg5), var(--cg6), var(--cg6), var(--cg7),
+          var(--cg7), var(--cg8), var(--cg8),
+          linear-gradient(-45deg, #fff0 0 32.25%, #0002 50%, #000 77.5%) var(--ts),
+          linear-gradient(-45deg, #fff0 0 32.25%, #000 60%) var(--ts),
+          repeating-linear-gradient(90deg, var(--c0) 0 5%, var(--c1) 0 25%) var(--ts);
+}
+
 header {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -235,7 +313,7 @@ header {
     padding: 0vh 5vw 0 5vw;
     justify-content: center;
     align-items: center;
-} 
+}
 
 header h1:first-child {
     font-size: calc(36px + (94 - 36) * (100vw - 400px) / (1800 - 400));
@@ -340,10 +418,6 @@ header h1:nth-child(3) {
 
 .main-index div:nth-child(5) {
     margin: 4% 0 0 0;
-}
-
-.main-index .btn {
-    margin: 3.3vw;
 }
 
 .main-p-container h2{
@@ -564,12 +638,6 @@ header h1:nth-child(3) {
     margin: 60px 0;
 }
 
-.profile .btn {
-    padding: 8px 22px;
-    font-size: 0.73rem;
-    border-radius: 14px;
-}
-
 .creative-suite {
     display: flex;
     height: 7.7vh;
@@ -617,6 +685,10 @@ header h1:nth-child(3) {
     100% {
         transform: translateX(0);
     }
+}
+
+.personal-skills li:hover {
+    color:#e15b5b;
 }
 
 .creative-suite img {
@@ -693,7 +765,7 @@ header h1:nth-child(3) {
     animation-range: entry 25%;
 }
 
-@keyframes slide-up {
+/* @keyframes slide-up {
     from {
         transform: translateY(100%);
         opacity: 0;
@@ -701,8 +773,8 @@ header h1:nth-child(3) {
     to {
         transform: translateY(0);
         opacity: 1;
-    }
-}
+    } 
+} */
 
 .skills-chart {
     position: absolute;
