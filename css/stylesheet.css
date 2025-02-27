@@ -26,26 +26,7 @@ html {
 
 body {
     font-family: var(--body-font);
-}
-
-.bespoken-body, 
-.bespoken-body h1, 
-.bespoken-body h2, 
-.bespoken-body h3, 
-.bespoken-body h4,
-.bespoken-body p {
-    background-color: #FFFFFC;
-    color: #191919;
-}
-
-.unity-body,
-.unity-body h1,
-.unity-body h2,
-.unity-body h3,
-.unity-body h4,
-.unity-body p {
-    background-color: white;
-    color: black;
+    cursor: url('../files/pointer.png'), auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -96,13 +77,14 @@ img {
     border-right: 3.5px solid #C13838;
     border-bottom: 3.5px solid #C13838;
     color: white;
-    padding: 7px 22px;
+    padding: 10px 26px;
     font-size: 0.73rem;
     font-weight: 500;
     letter-spacing: 0.5px;
-    border-radius: 13px;
-    transition: 0.5s;
+    border-radius: 10px;
+    transition: 0.3s;
     margin: 3vw;
+    white-space: nowrap;
 }
 
 .btn2 {
@@ -110,9 +92,10 @@ img {
     font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.5px;
-    transition: 0.5s;
+    transition: 0.3s;
     margin: 3vw; 
     text-decoration: underline;
+    white-space: nowrap;
 }
 
 .btn:hover {
@@ -125,6 +108,11 @@ img {
 
 .content-container {
     margin-left: calc(15vw + 8px);
+}
+
+#logo {
+    width: 4vw;
+    height: auto;
 }
 
 nav {
@@ -147,7 +135,6 @@ nav ul{
 
 nav ul li a{
     color: white;
-    width: 27%;
     display: block;
 }
 
@@ -166,10 +153,10 @@ nav ul li a:hover {
 nav ul li p {
     font-size: clamp(0.8rem, calc(11px + (11 - 9)*(100vw - 400px) /(1800 - 400)), 4rem);
     /* font-size: calc(11px + (11 - 9)*(100vw - 400px) /(1800 - 400)); */
-    letter-spacing: 3.3px;
+    letter-spacing: 2px;
     font-weight: 200;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 nav ul > li:nth-child(1) {
@@ -177,10 +164,6 @@ nav ul > li:nth-child(1) {
     flex-direction: column;
     align-items: center;
     margin-top: 5vh;
-}
-
-nav ul >li:nth-child(1) div {
-    margin-top: 1.7vh;
 }
 
 .nav-buttons {
@@ -241,7 +224,7 @@ nav .contact-icons {
     font-weight: 100;
 }
 
-.main-deco {
+.img-deco {
     width: 10vw;
         /* Add your background pattern here */
         --sz: 24px;
@@ -631,7 +614,8 @@ header h1:nth-child(3) {
 .profile-text {
     text-align: center;
     line-height: 2;
-    margin: 10vh 20vw;
+    margin: 10vh auto;
+    width: 25vw;
 }
 
 .profile p {
@@ -747,7 +731,7 @@ header h1:nth-child(3) {
     left: 30%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-image: url('../images/JBM Logo White.svg'); /* Corrected syntax */
+    background-image: url('../images/Emblem.svg'); /* Corrected syntax */
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -1422,7 +1406,7 @@ footer{
     
 }
 
-@media (min-width: 2200px) {
+/* @media (min-width: 2200px) {
 
     #logo {
         width: 4rem;
@@ -1452,4 +1436,4 @@ footer{
     .contact h6 {
         font-size: calc(9px + (11 - 9) * (100vw - 400px) / (1800 - 400));
     }
-}
+} */
