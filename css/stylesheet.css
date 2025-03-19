@@ -1211,7 +1211,7 @@ footer{
     }
 
     .profile-text {
-        margin: 8vh 15vw;
+        width: 90vw;
     }
 
     .slider:nth-child(1) {    
