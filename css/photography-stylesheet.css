@@ -1,6 +1,6 @@
 .content-container {
     columns: 5;
-    padding: 1vw;
+    padding: 0 1vw;
 }
 .content-container img {
     margin-bottom: 10px;
