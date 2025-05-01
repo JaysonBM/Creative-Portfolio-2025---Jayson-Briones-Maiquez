@@ -1,8 +1,27 @@
-.content-container {
+.photoshop-container {
+    padding: 5vh 1vw;;
+}
+
+.photoshop-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.photoshop-container img {
+    background: red;
+    height: 300px;
+    width: 200px;
+    margin: 1vw;
+}
+
+.photography-container {
     columns: 5;
     padding: 0 1vw;
 }
-.content-container img {
+
+.photography-container img {
     margin-bottom: 10px;
 }
 
