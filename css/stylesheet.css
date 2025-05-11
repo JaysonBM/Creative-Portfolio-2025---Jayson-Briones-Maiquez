@@ -42,9 +42,7 @@ h1 {
 
 h2 {
     font-size: calc(16px + (16 - 14)*(100vw - 400px) / (1800 - 400));
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 h3 {
@@ -77,7 +75,7 @@ img {
     border-right: 3.5px solid #C13838;
     border-bottom: 3.5px solid #C13838;
     color: white;
-    padding: 10px 26px;
+    padding: 11px 28px;
     font-size: 0.73rem;
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -291,21 +289,11 @@ nav .contact-icons {
 }
 
 header {
-    display: grid;
-    grid-template-columns: auto 1fr;
+    background-image: url(../images/NYTimesMagazine-Mockup-COVER.jpg);
+    background-size: cover;
+    background-position: center;
     height: 100vh;
-    padding: 0vh 5vw 0 5vw;
-    justify-content: center;
-    align-items: center;
-}
-
-header h1:first-child {
-    font-size: calc(36px + (94 - 36) * (100vw - 400px) / (1800 - 400));
-    line-height: 0.9;
-} 
-
-header h1:nth-child(3) {
-    font-size: calc(14px + (44 - 14) * (100vw - 400px) / (1800 - 400));
+    position: relative;
 }
 
 .header-details {
@@ -362,14 +350,15 @@ header h1:nth-child(3) {
     align-items: center;
     justify-content: center;
     position: absolute;
-    width: 84%;
-    left: 16vw;
+    width: 100%;
     top: 4.3%;
 }
 
 .title-deco-container h3 {
     font-weight: 300;
     font-size: 14px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 1); /* Add text shadow */
+
 }
 
 .title-deco {
@@ -377,15 +366,23 @@ header h1:nth-child(3) {
     height: 5px;
     width: 28%;
     margin: 0px 2.2vw;
-}
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8); /* Add drop shadow */
 
+}
 .main-index {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 66%;
-    justify-content: space-between;
-    gap: 5%;
+    height: 70%;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 1vh 5vw;
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    justify-content: space-evenly;
+    backdrop-filter: blur(11px) brightness(0.9); /* Blur and brightness adjustments */
+    -webkit-backdrop-filter: blur(11px) brightness(0.9); /* For Safari support */
 }
 
 .main-index h1 {
@@ -393,11 +390,7 @@ header h1:nth-child(3) {
 }
 
 .main-index img {
-    width: 17%;
-}
-
-.main-index p {
-    margin: 0 21vw;
+    width: 37%;
 }
 
 .main-index div:nth-child(5) {
