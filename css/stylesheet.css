@@ -391,10 +391,7 @@ header {
 
 .main-index img {
     width: 37%;
-}
-
-.main-index div:nth-child(5) {
-    margin: 4% 0 0 0;
+    object-fit: cover;
 }
 
 .main-p-container h2{
@@ -942,12 +939,6 @@ footer{
         padding: 1rem;
     }
 
-    main p {
-        font-size: calc(11px + (20 - 11) * (100vw - 400px) / (1800 - 400));
-        margin-top: 1.5rem;
-        line-height: 1.4;
-    }
-
     .process,
     .process-reverse {
         margin-bottom: 4vh;
@@ -999,7 +990,6 @@ footer{
         margin: 0 0 0 5vw;
         align-items: center;
         gap: 0.4rem;
-        padding: 0px 0 0.75rem 0;
     }
 
     nav ul >li:nth-child(1) div {
@@ -1080,34 +1070,24 @@ footer{
     }
 
     .main-index {
-        height: 94%;     
-        gap: 7%;
-        justify-content: flex-start;
+        width: 70vw;
+        gap: 6%;
+        justify-content: center;
+        padding: 2vh 5vw;
     }
 
     .main-index img {
-        width: 33%;
-    }
-
-    .main-index p {
-        margin:  0 10vw;
+        width: 50vw;
+        object-fit: cover;
     }
 
    .main-index .btn {
-        margin: 5vw;
-        padding: 12px 28px;
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         letter-spacing: 0.5px;
-        border-radius: 15px;
     }
 
     .image-wrapper p {
         font-size: 2rem;
-    }
-    
-    .title-deco-container {
-        position: static;
-        width: 100vw;
     }
 
     .title-deco-container h3 { 
@@ -1185,14 +1165,6 @@ footer{
     .header-text p {
         font-size: calc(13px + (18 - 13) * (100vw - 400px) / (1800 - 400));
         margin: 42px 0;
-    }
-
-    main {
-        text-align: center;
-    }
-
-    main p {
-        margin-top: 30px;
     }
 
     .profile {
