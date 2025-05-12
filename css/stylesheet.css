@@ -1025,6 +1025,7 @@ footer{
     }
 
     #content-container, #gallery-container, #about {
+        height: calc(100vh - 72px);
         scroll-margin-top: 72px;
     }
 
@@ -1064,13 +1065,17 @@ footer{
         transition: height 0.3s ease;
     }
 
+    header {
+        height: calc(100vh - 72px);
+    }
+
     .content-container {
         margin-left: 0;
         margin-top: 72px;
     }
 
     .main-index {
-        width: 70vw;
+        width: 80vw;
         gap: 6%;
         justify-content: center;
         padding: 2vh 5vw;
@@ -1108,6 +1113,10 @@ footer{
         height: 50vh;
     }
 
+    .gallery-description h1 {
+        font-size: clamp(0.5rem, calc(24px + (24 - 18)*(100vw - 400px) /(1800 - 400)), 4rem);
+    }
+
     .description-deco {
         height: 3px;
     }
@@ -1127,10 +1136,6 @@ footer{
         cursor: default; /* Change cursor to default */
     }
 
-    .default-description, .unity-description, .bespoken-description, .kingdom-description, .signage-description { 
-        height: 50vh;
-        padding: 5vw;
-    }
     
     .header-details {
         grid-template-columns: 1fr;
@@ -1365,40 +1370,3 @@ footer{
         margin-right: 5vw;
     }
 }
-
-/* X-Large devices (i.e. big desktop) */
-@media (min-width: 1800px) {
-    
-}
-
-/* @media (min-width: 2200px) {
-
-    #logo {
-        width: 4rem;
-    }
-
-    nav ul li p {
-        font-size: 1rem; 
-        margin-bottom: 12px;
-    }
-
-    nav ul li a {
-        font-size: 1.6rem;
-    }
-    .nav-buttons li {
-        margin-bottom: 3vh;
-    }
-
-    .contact p {
-        font-size: calc(14px + (18 - 14) * (100vw - 400px) / (1800 - 400));
-    }
-
-    .contact-icons li i {
-        font-size: 1.8rem;
-        padding: 16px 10px 22px 10px
-    }
-
-    .contact h6 {
-        font-size: calc(9px + (11 - 9) * (100vw - 400px) / (1800 - 400));
-    }
-} */
