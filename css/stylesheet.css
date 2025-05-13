@@ -1300,18 +1300,8 @@ footer{
 
 }
 
-
-
-/* Large devices (i.e. desktop) */
-@media (max-width: 1200px) {
-
-    .two-columns {
-        grid-gap: 0;
-        line-height: 1.8
-        ;
-    }
-
-    .two-columns-fixed {
-        margin-right: 5vw;
+@media (max-width: 3456px) {
+    #logo {
+        width: 4vw;
     }
 }

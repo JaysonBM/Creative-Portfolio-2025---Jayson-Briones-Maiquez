@@ -1,0 +1,25 @@
+.magazine {
+    height: 60vh;
+    width: 80vw;
+}
+
+.magazine .cover {
+    background-color: blue;
+    color: wheat;
+    font-weight: bold;
+    border: none;
+}
+
+.magazine .page {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page img {
+    width: 70%;
+    object-fit: cover;
+    margin: auto;
+}
