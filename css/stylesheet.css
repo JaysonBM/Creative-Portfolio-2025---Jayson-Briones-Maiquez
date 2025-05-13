@@ -75,7 +75,7 @@ img {
     border-right: 3.5px solid #C13838;
     border-bottom: 3.5px solid #C13838;
     color: white;
-    padding: 11px 28px;
+    padding: 8px 25px;
     font-size: 0.73rem;
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -104,12 +104,21 @@ img {
     color: #C13838;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+    }
+    to {
+        opacity: 1; /* End fully visible */
+    }
+}
+
 .content-container {
     margin-left: calc(15vw + 8px);
 }
 
 #logo {
-    width: 4vw;
+    width: 5vw;
     height: auto;
 }
 
@@ -222,72 +231,6 @@ nav .contact-icons {
     font-weight: 100;
 }
 
-.img-deco {
-    width: 10vw;
-        /* Add your background pattern here */
-        --sz: 24px;
-        --c0: #000;
-        --c1: #c13838;
-        --ts: 50% / calc(var(--sz) * 8) calc(var(--sz) * 16);
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        --dot: var(--c1) 0 calc(var(--sz) * 0.78),
-          #fff0 calc(calc(var(--sz) * 0.78) + 1px) 100%;
-        --dot2: radial-gradient(circle at 90% 0%, var(--dot)) var(--ts),
-          radial-gradient(circle at 65% 0%, var(--dot)) var(--ts),
-          radial-gradient(circle at 40% 0%, var(--dot)) var(--ts),
-          radial-gradient(circle at 15% 0%, var(--dot)) var(--ts);
-        --cg1: conic-gradient(from -90deg at 5% 51%, var(--c0) 0 90deg, #fff0 0 100%)
-          var(--ts);
-        --cg2: conic-gradient(from -90deg at 25% 50%, var(--c1) 0 90deg, #fff0 0 100%)
-          var(--ts);
-        --cg3: conic-gradient(
-            from -90deg at 30% 38.5%,
-            var(--c0) 0 90deg,
-            #fff0 0 100%
-          )
-          var(--ts);
-        --cg4: conic-gradient(
-            from -90deg at 50% 37.5%,
-            var(--c1) 0 90deg,
-            #fff0 0 100%
-          )
-          var(--ts);
-        --cg5: conic-gradient(from -90deg at 55% 26%, var(--c0) 0 90deg, #fff0 0 100%)
-          var(--ts);
-        --cg6: conic-gradient(from -90deg at 75% 25%, var(--c1) 0 90deg, #fff0 0 100%)
-          var(--ts);
-        --cg7: conic-gradient(
-            from -90deg at 80% 13.5%,
-            var(--c0) 0 90deg,
-            #fff0 0 100%
-          )
-          var(--ts);
-        --cg8: conic-gradient(
-            from -90deg at 100% 12.5%,
-            var(--c1) 0 90deg,
-            #fff0 0 100%
-          )
-          var(--ts);
-      
-        background: var(--dot2), var(--dot2),
-          radial-gradient(circle at 90% 100%, var(--dot)) var(--ts),
-          radial-gradient(circle at 65% 100%, var(--dot)) var(--ts),
-          radial-gradient(circle at 40% 100%, var(--dot)) var(--ts),
-          radial-gradient(circle at 15% 100%, var(--dot)) var(--ts),
-          radial-gradient(circle at 90% 12.5%, var(--dot)) var(--ts),
-          radial-gradient(circle at 65% 25%, var(--dot)) var(--ts),
-          radial-gradient(circle at 40% 37.5%, var(--dot)) var(--ts),
-          radial-gradient(circle at 15% 50%, var(--dot)) var(--ts), var(--cg1),
-          var(--cg1), var(--cg2), var(--cg2), var(--cg3), var(--cg3), var(--cg4),
-          var(--cg4), var(--cg5), var(--cg5), var(--cg6), var(--cg6), var(--cg7),
-          var(--cg7), var(--cg8), var(--cg8),
-          linear-gradient(-45deg, #fff0 0 32.25%, #0002 50%, #000 77.5%) var(--ts),
-          linear-gradient(-45deg, #fff0 0 32.25%, #000 60%) var(--ts),
-          repeating-linear-gradient(90deg, var(--c0) 0 5%, var(--c1) 0 25%) var(--ts);
-}
-
 header {
     background-image: url(../images/NYTimesMagazine-Mockup-COVER.jpg);
     background-size: cover;
@@ -369,6 +312,7 @@ header {
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8); /* Add drop shadow */
 
 }
+
 .main-index {
     display: flex;
     flex-direction: column;
@@ -383,6 +327,8 @@ header {
     justify-content: space-evenly;
     backdrop-filter: blur(11px) brightness(0.9); /* Blur and brightness adjustments */
     -webkit-backdrop-filter: blur(11px) brightness(0.9); /* For Safari support */
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
 }
 
 .main-index h1 {
@@ -392,6 +338,8 @@ header {
 .main-index img {
     width: 37%;
     object-fit: cover;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
 }
 
 .main-p-container h2{
@@ -405,6 +353,10 @@ header {
     flex-direction: row;
     height: 100vh;
     align-items: center;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+    animation-timeline: view();
+    animation-range: entry 30%;
 }
 
 .gallery {
@@ -599,13 +551,17 @@ header {
 .profile {
     margin: 0 0 2vh 0px;
     border-bottom: 5px solid #C13838;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+    animation-timeline: view();
+    animation-range: entry -30%;
 }
 
 .profile-text {
     text-align: center;
     line-height: 2;
     margin: 10vh auto;
-    width: 25vw;
+    width: clamp(25vw, 30vw, 30vw);
 }
 
 .profile p {
@@ -739,17 +695,6 @@ header {
     animation-timeline: view();
     animation-range: entry 25%;
 }
-
-/* @keyframes slide-up {
-    from {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    } 
-} */
 
 .skills-chart {
     position: absolute;
