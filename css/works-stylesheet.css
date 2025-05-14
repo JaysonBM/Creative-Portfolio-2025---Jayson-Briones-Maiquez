@@ -1,3 +1,11 @@
+header {
+    background-image:none; !important;
+}
+
+.header-details {
+    display:grid
+}
+
 .filter-buttons {
     display: flex; /* Use flexbox to align items */
     justify-content: center; /* Center the buttons horizontally */

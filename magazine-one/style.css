@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+#logo {
+    width: 4vw;
+}
+
+nav {
+    background: linear-gradient(to bottom, #030303, #020202fa);
+    border-right: 8px solid #C13838;
+    position: fixed;
+    z-index: 1;
+    width: 15vw;
+}
+
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+nav ul li a{
+    color: white;
+    display: block;
+    text-decoration: none;
+    font-size: calc(15px +(15 - 11)*(100vw - 400px) /(1800 - 400));
+}
+
+nav ul li a:hover {
+    /* filter: drop-shadow(2px 2px 2px #C13838); */
+    color: #c96060;
+}
+
+.center-align {
+    display: flex;
+    flex-direction: row-reverse; /* Change to row if you want items side by side */
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-end; /* Center items vertically */
+}
+
+nav ul li p {
+    font-size: clamp(0.8rem, calc(11px + (11 - 9)*(100vw - 400px) /(1800 - 400)), 4rem);
+    /* font-size: calc(11px + (11 - 9)*(100vw - 400px) /(1800 - 400)); */
+    letter-spacing: 2px;
+    font-weight: 200;
+    text-align: center;
+    margin-top: 12px;
+}
+
+nav ul > li:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.nav-buttons {
+    width: 38%;
+}
+
+.nav-buttons li{
+    margin-bottom: 3vh;
+    font-weight: 400;
+}
+
+.li-hover {
+    position: absolute;
+    left: -6vw;
+    background-color: #C13838;
+    height: 4px;
+    width: 6.6vh;
+    opacity: 0;
+    box-shadow: 0 0 6px #C13838;
+    visibility: hidden;
+    transition: opacity 1s visibility 1s;
+}
+
+.nav-buttons li:hover .li-hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(6vw);
+}
+
+nav .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.8vh;
+    margin-bottom: 1vh;
+}
+
+.contact p {
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+nav .contact-icons {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-icons li i{
+    font-size: 1.6rem;
+    height: auto;
+    width: auto;
+    padding: 10px;
+}
+.contact h6 {
+    font-size: calc(7px + (9 - 7) * (100vw - 400px) / (1800 - 400));
+    line-height: 1.3;
+    font-weight: 100;
+}
+
+#menu-icon,
+#close-icon {
+    display: none;
+}
+
+.flipbook-container {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    width: 85vw;
+	overflow: hidden;
+	background: linear-gradient(350deg, rgb(15, 15, 15), rgb(20, 20, 20));
+    gap: 18px;
+    margin-left: calc(15vw + 8px);
+}
+
+.flipbook-container h1 {
+    color: white;
+    text-align: center;
+}
+
+.flipbook {
+    width: 50vw;
+    height: 50vh;
+}
+
+.flipbook .hard {
+    background: black !important;
+    color: #fff;
+    font-weight: bold;
+    border: none; 
+}
+
+.flipbook .hard small{
+	font-style: italic;
+	font-weight: lighter;
+	opacity: 0.7;
+	font-size: 14px;
+}
+
+.flipbook .page {
+    background: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.11);
+}
+
+.page img{
+	width: 100%;
+	object-fit: cover;
+	margin: auto;
+}
+
+.flipbook .page small{
+	font-size: 14px;
+    margin-bottom: 10px;
+}
+
