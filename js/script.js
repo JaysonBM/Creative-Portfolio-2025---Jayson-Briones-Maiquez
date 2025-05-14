@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Change the height of the .skills-bar
             const barHeight = img.getAttribute('data-height');
-            document.querySelector('.skills-bar').style.height = barHeight;
+            document.querySelector('.rating-scale').style.height = barHeight;
         });
     });
 
