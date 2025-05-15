@@ -224,6 +224,7 @@ nav ul > li:nth-child(1) {
     box-shadow: 0 0 6px #C13838;
     visibility: hidden;
     transition: opacity 1s visibility 1s;
+    z-index: -1;
 }
 
 .nav-buttons li:hover .li-hover {
