@@ -1,9 +1,26 @@
 header {
-    background-image:none; !important;
+    background-image:none !important;
 }
 
 .header-details {
     display:grid
+}
+
+.featured {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 18px
+}
+
+.featured div {
+    height: 80vh;
+    width: calc(85vw - 23px);
+    background-color: #C13838;
+    background-image: url(../images/NYTimesMagazine-Mockup-COVER.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .filter-buttons {
@@ -11,6 +28,7 @@ header {
     justify-content: center; /* Center the buttons horizontally */
     margin: 0 auto; /* Center the container itself if needed */
     width: fit-content; /* Adjust width as needed */
+    margin-bottom: 2vh;
 }
 
 .filter-button {
@@ -33,5 +51,11 @@ header {
 }
 
 .works-container {
-    columns: 4;
+    columns: 3;
+}
+
+.works-container > div > div {
+    height: 60vh;
+    width: auto;
+    background-color: #C13838;
 }
