@@ -939,6 +939,10 @@ footer{
 /* Small devices (i.e. tablets in portrait) */
 @media (max-width: 600px) {
 
+    .scroll-watcher {
+        height: 3px;
+    }
+
     .container {
         display: block;
     }
