@@ -54,6 +54,11 @@ header {
     columns: 3;
 }
 
+.works-container > div {
+    break-inside: avoid;
+    margin-bottom: 3vh;
+}
+
 .works-container > div > div {
     height: 60vh;
     width: auto;
