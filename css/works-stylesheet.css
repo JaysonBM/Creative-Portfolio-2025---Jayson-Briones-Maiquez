@@ -56,11 +56,22 @@ header {
 
 .works-container > div {
     break-inside: avoid;
-    margin-bottom: 3vh;
+    margin-bottom: 5vh;
 }
 
 .works-container > div > div {
     height: 60vh;
     width: auto;
     background-color: #C13838;
+}
+
+.works-container h1 {
+    line-height: 1.1;
+    margin-top: 0.5rem;
+}
+
+.works-container h2 {
+    font-weight: 400;
+    line-height: 1.2;
+    font-style: italic;
 }
