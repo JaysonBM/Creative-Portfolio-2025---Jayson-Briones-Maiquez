@@ -14,11 +14,15 @@ header {
     gap: 18px
 }
 
+h1, h2{
+    display: none;
+}
+
 .featured div {
     height: 80vh;
     width: calc(85vw - 23px);
     background-color: #C13838;
-    background-image: url(../images/Hip-Hop\ Magazine\ Mockup.jpg);
+    background-image: url(../images/Hip-Hop\ Magazine\ Mockup\ 2.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -74,4 +78,19 @@ header {
     font-weight: 400;
     line-height: 1.2;
     font-style: italic;
+}
+
+@media screen and (max-width: 600px) {
+    .featured {
+        height: 90vh;
+    }
+
+    .featured div {
+        width: 100vw;
+    }
+
+    .works-container {
+        columns: 2;
+    }
+    
 }

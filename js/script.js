@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
             desc.style.opacity = "0"; // Fade out
             setTimeout(() => {
                 // desc.style.display = "none"; // Fully hide after fade-out
-            }, 500); // Match the CSS transition duration
+            }, 0); // Match the CSS transition duration
         });
     }
 
@@ -43,14 +43,14 @@ document.addEventListener("DOMContentLoaded", function () {
             activeDescription.style.opacity = "0";
             setTimeout(() => {
                 // activeDescription.style.display = "none";
-            }, 300); // Match fade-out duration
+            }, 0); // Match fade-out duration
         }
 
         // Show the new description
         description.style.display = "block"; // Make it block-level
         setTimeout(() => {
             description.style.opacity = "1"; // Fade in
-        }, 50); // Small delay for smoother transition
+        }, 0); // Small delay for smoother transition
 
         // Update the active description
         activeDescription = description;
@@ -68,6 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+    
 
     // Initial setup: Ensure only the default description is visible
     hideAllDescriptions();
