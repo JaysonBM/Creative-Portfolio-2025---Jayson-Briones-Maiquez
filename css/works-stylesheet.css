@@ -14,10 +14,6 @@ header {
     gap: 18px
 }
 
-h1, h2{
-    display: none;
-}
-
 .featured div {
     height: 80vh;
     width: calc(85vw - 23px);
@@ -60,13 +56,15 @@ h1, h2{
 
 .works-container > div {
     break-inside: avoid;
-    margin-bottom: 5vh;
+    margin-bottom: 1vh;
+    position: relative;
 }
 
 .works-container > div > div {
-    height: 60vh;
-    width: auto;
-    background-color: #C13838;
+    display: none;
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
 }
 
 .works-container h1 {
@@ -78,6 +76,10 @@ h1, h2{
     font-weight: 400;
     line-height: 1.2;
     font-style: italic;
+}
+
+.works-container > div:hover > div {
+    display: block;
 }
 
 @media screen and (max-width: 600px) {
