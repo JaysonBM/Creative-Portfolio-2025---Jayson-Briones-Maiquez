@@ -1,0 +1,69 @@
+.header-details picture {
+    position: relative;
+}
+
+.header-details > picture > div {
+    position: absolute;
+    bottom: 3vh;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.main-img {
+    height: 100vh !important;
+    width: 100% !important;
+    transition: opacity 0.4s;
+    opacity: 1;
+}
+
+.main-img.fading {
+    opacity: 0;
+}
+
+.header-details a {
+    text-decoration: underline;
+    color: #c13838;
+}
+
+.header-text {
+    height: 90vh;
+    padding: 5vh 2.5vw;
+}
+
+.header-text h2 {
+    margin: 1vh 0 0 0;
+    line-height: 1.2;
+}
+
+.header-text p {
+    line-height: 1.5;
+    margin: 10% 0;
+}
+
+.two-columns {
+    columns: 2;
+}
+
+.header-details div {
+    break-inside: avoid;
+    margin-bottom: 1vh;
+    position: relative;
+}
+
+.details-thumbs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 1vw;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.details-thumb {
+    aspect-ratio: 1 / 1;      /* Keeps images square */
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
