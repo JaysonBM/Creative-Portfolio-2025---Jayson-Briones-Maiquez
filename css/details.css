@@ -52,7 +52,7 @@
 
 .details-thumbs {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     gap: 1vw;
     width: 80%;
     margin: 0 auto;
@@ -61,9 +61,47 @@
 .details-thumb {
     aspect-ratio: 1 / 1;      /* Keeps images square */
     width: 100%;
-    object-fit: cover;
     border-radius: 8px;
     cursor: pointer;
     transition: box-shadow 0.2s;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    opacity: .6;
+}
+
+.details-thumb:hover:not(.active) {
+    transition: .5s;
+    opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+    .header-details {
+        padding-top: 0;
+        margin-bottom: 0;
+    }
+
+    .header-details .main-img {
+        height: 30vh !important;
+    }
+
+    .header-text {
+        padding: 3vh 2.5vw;
+    }
+
+    .header-details > picture > div {
+        position: relative;
+    }
+
+    .details-thumbs {
+        width: 95%;
+        margin: 0;
+    }
+
+    .details-thumb {
+        opacity: 1;
+    }
+
+    h1 {
+        text-align: center;
+    }
+    
 }
