@@ -61,7 +61,7 @@ header {
     overflow: hidden;
 }
 
-.works-container > div > a > div {
+.details-text {
     position: absolute;
     top: 0;
     left: 0;
@@ -93,6 +93,22 @@ header {
     line-height: 1.2;
     font-style: italic;
 }
+
+.details-icons {
+    position: absolute;
+    display: flex;
+    bottom: 2vh;
+    right: 0;
+    opacity: 0;
+    z-index: 2;
+}
+
+.details-icons img {
+    height: 50px;
+    width: 50px;
+    margin-right: 1vw;
+}
+
 
 @media screen and (max-width: 600px) {
     .featured {
