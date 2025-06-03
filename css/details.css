@@ -56,11 +56,12 @@
     gap: 1vw;
     width: 80%;
     margin: 0 auto;
+    justify-items: center;
 }
 
 .details-thumb {
     aspect-ratio: 1 / 1;      /* Keeps images square */
-    width: 100%;
+    width: 90%;
     border-radius: 8px;
     cursor: pointer;
     transition: box-shadow 0.2s;
