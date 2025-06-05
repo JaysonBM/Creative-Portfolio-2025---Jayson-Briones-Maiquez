@@ -50,6 +50,13 @@
     position: relative;
 }
 
+.details-icons {
+    display: block;
+    opacity: 1;
+    bottom: 0;
+    top: 1vh;
+}
+
 .details-thumbs {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));

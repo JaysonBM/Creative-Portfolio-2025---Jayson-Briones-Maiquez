@@ -14,13 +14,36 @@ header {
     gap: 18px
 }
 
-.featured div {
+.works-img-container {
+    position: relative;
     height: 80vh;
     width: calc(85vw - 23px);
     background-color: #C13838;
     background-image: url(../images/Hip-Hop\ Magazine\ Mockup\ 2.jpg);
     background-size: cover;
     background-position: center;
+}
+
+.works-img-container:hover {
+    background-image: url(../images/Hip-Hop\ Magazine\ Mockup\ 3.jpg);
+    transition: 0.5s;
+}
+
+.works-img-container:hover > .details-icons {
+    opacity: 1;
+}
+
+.featured-text {
+    padding: 0 20vw;
+}
+
+.featured-text h1 {
+    margin-top: 2vh;
+}
+
+.featured-text p {
+    text-align: left;
+    margin-top: 2vh;
 }
 
 .filter-buttons {
@@ -77,10 +100,8 @@ header {
     display: block;
 }
 
-/* On hover, slide the overlay down and fade it in */
 .works-container > div:hover > a >  div {
     opacity: 1;
-
 }
 
 .works-container h1 {
@@ -112,11 +133,16 @@ header {
 
 @media screen and (max-width: 600px) {
     .featured {
-        height: 90vh;
+        height: 80vh;
     }
 
-    .featured div {
-        width: 100vw;
+    .works-img-container {
+        width: auto;
+        height: 50vh;
+    }
+
+    .featured-text {
+        padding: 0 5vw;
     }
 
     .works-container {
