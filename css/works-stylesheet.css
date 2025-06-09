@@ -16,12 +16,13 @@ header {
 
 .works-img-container {
     position: relative;
-    height: 80vh;
-    width: calc(85vw - 23px);
+    height: 70vh;
+    width: calc(75vw - 23px);
     background-color: #C13838;
     background-image: url(../images/Hip-Hop\ Magazine\ Mockup\ 2.jpg);
     background-size: cover;
     background-position: center;
+    margin: 5vh auto;
 }
 
 .works-img-container:hover {
@@ -43,7 +44,7 @@ header {
 
 .featured-text p {
     text-align: left;
-    margin-top: 2vh;
+    margin-top: 4vh;
 }
 
 .filter-buttons {
