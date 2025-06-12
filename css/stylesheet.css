@@ -288,12 +288,6 @@ header {
     position: relative;
 }
 
-.header-details {
-    grid-template-columns: 1fr 1fr;
-    padding: 0;
-    margin-bottom: 20vh;
-}
-
 .header-details picture {
     height: 100vh;
 }

@@ -2,29 +2,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const imageContainer = document.getElementById('photography-container');
     const imageFolder = 'photos/';
     const imageFilenames = [
-        'Steph_PS-Edit-(9).jpg',
         'Steph_PS-Edit-(5).jpg',
-        'Steph_PS-Edit-(1).jpg',
         'Steph_PS-Edit-(7).jpg',
         'Cassie_PS-Edit-(1).jpg',
         'Cassie_PS-Edit-(4).jpg',
         'Cassie_PS-Edit-(2).jpg',
         'Cassie_PS-Edit-(5).jpg',
         'EV_PS-RAW-(1).jpg',
-        'EV_PS-RAW-(2).jpg',
-        'Steph_PS-Edit-(8).jpg',
         'Steph_PS-Edit-(3).jpg',
         'Steph_PS-Edit-(2).jpg',
         'Steph_PS-Edit-(4).jpg',
         'Cassie_PS-Edit-(3).jpg',
         'Cassie_PS-Edit-(6).jpg',
         'Cassie_PS-Edit-(7).jpg',
-        'Cassie_PS-Edit-(8).jpg',
         'PS-RAW.jpg',
         'PS-Edit.jpg',
         'Steph_PS-Edit-(6).jpg',
         'Steph_PS-Edit.jpg',
-        'Pisam_PS-Edit.jpg',
         'Pisam_PS-Edit-(1).jpg',
         'Pisam_PS-Edit-(2).jpg',
         'Pisam_PS-Edit-(3).jpg',
@@ -34,9 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
         'PS-Edit-(2).jpg',
         'PS-Edit-(3).jpg',
         'RAW.jpg',
-        'RAW-(2).jpg',
-        'RAW-(3).jpg'
-    ];
+        'RAW-(2).jpg'
+        ];
 
     imageFilenames.forEach(filename => {
         const img = document.createElement('img');
