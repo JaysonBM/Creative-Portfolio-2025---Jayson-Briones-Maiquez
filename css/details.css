@@ -131,6 +131,7 @@
     .header-details {
         padding-top: 0;
         margin-bottom: 0;
+        grid-template-columns: 1fr;
     }
 
     .header-details .main-img {
@@ -152,6 +153,10 @@
 
     .details-thumb {
         opacity: 1;
+    }
+
+    .details-icons {
+        text-align: center;
     }
 
     h1 {
